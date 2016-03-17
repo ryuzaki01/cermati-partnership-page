@@ -7,22 +7,1413 @@
     <link href="/dist/css/vendor.min.css" rel="stylesheet">
     <link href="/dist/css/all.min.css" rel="stylesheet">
     <style>
-      .ui-autocomplete {
-        max-height: 200px;
-        overflow-y: auto;
-        /* prevent horizontal scrollbar */
-        overflow-x: hidden;
-      }
-      /* IE 6 doesn't support max-height
-       * we use height instead, but this forces the menu to always be this tall
-       */
-      * html .ui-autocomplete {
-        height: 200px;
-      }
+     .ui-autocomplete {
+       max-height: 200px;
+       overflow-y: auto;
+       /* prevent horizontal scrollbar */
+       overflow-x: hidden;
+     }
+     /* IE 6 doesn't support max-height
+      * we use height instead, but this forces the menu to always be this tall
+      */
+     * html .ui-autocomplete {
+       height: 200px;
+     }
     </style>
   </head>
   <body>
-
+    <div id="content">
+      <section>
+        <h2>
+          Data Pemohon
+        </h2>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nama Depan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-first-name">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nama Belakang</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-last-name">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nama lengkap tanpa singkatan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-full-name-without-abbreviation">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nomor KTP</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-id-number">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nomor NPWP</label>
+            </div>
+            <div class="td">
+              <input type="text" name="taxpayer-identification-number">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Provinsi Tempat Lahir</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-place-of-birth-province">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kota Tempat Lahir</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-place-of-birth-city">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Tanggal Lahir</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-date-of-birth">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Jenis Kelamin</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-gender">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Pendidikan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-last-education-level">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nama gadis Ibu Kandung</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-mothers-maiden-name">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Status pernikahan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-marriage-status">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Jumlah tanggungan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-number-of-dependant">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Alamat sesuai identitas</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-address">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">RT</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-residence-neighbourhood">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">RW</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-residence-commune">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kelurahan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-residence-village">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kecamatan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-residence-district">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Provinsi</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-residence-province">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kabupaten/Kota</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-residence-city">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kode Pos</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-residence-postal-code">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Alamat tinggal saat ini</label>
+            </div>
+            <div class="td">
+              <input type="text" name="">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Alamat tinggal saat ini</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-current-address">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">RT</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-current-residence-neighbourhood">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">RW</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-current-residence-commune">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kelurahan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-current-residence-village">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kecamatan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-current-residence-district">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Provinsi</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-current-residence-province">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kabupaten/Kota</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-current-residence-city">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kode Pos</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-current-residence-postal-code">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Status Kepemilikan Rumah</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-residence-ownership-status">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">No. Telepon / Handphone</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-home-phone-number">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Lama tinggal</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-residence-time-duration">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Email</label>
+            </div>
+            <div class="td">
+              <input type="text" name="applicant-personal-email">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Data Pekerjaan Pemohon
+        </h2>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Jenis Pekerjaan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="type-of-jobs">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nama Usaha / Kantor</label>
+            </div>
+            <div class="td">
+              <input type="text" name="current-company-name">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Alamat Usaha / Kantor</label>
+            </div>
+            <div class="td">
+              <input type="text" name="current-company-address">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">No. telepon kantor</label>
+            </div>
+            <div class="td">
+              <input type="text" name="current-company-phone-number">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Extension</label>
+            </div>
+            <div class="td">
+              <input type="text" name="current-company-phone-number-extension">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Provinsi</label>
+            </div>
+            <div class="td">
+              <input type="text" name="current-company-address-province">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kabupaten/Kota</label>
+            </div>
+            <div class="td">
+              <input type="text" name="current-company-address-city">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kode Pos</label>
+            </div>
+            <div class="td">
+              <input type="text" name="current-company-address-postal-code">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Bidang Usaha</label>
+            </div>
+            <div class="td">
+              <input type="text" name="current-company-industry">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Jabatan di Perusahaan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="current-company-position">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Lama usaha / lama bekerja</label>
+            </div>
+            <div class="td">
+              <input type="text" name="current-company-working-time-duration">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Penghasilan / gaji perbulan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="current-company-income-per-month">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Penghasilan lain / gaji lain perbulan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="other-income-per-month">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Pengeluaran perbulan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="monthly-expense">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Sumber penghasilan untuk pembayaran angsuran berasal dari</label>
+            </div>
+            <div class="td">
+              <input type="text" name="source-of-income-for-payment">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Data Badan Hukum Pemohon
+        </h2>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nama Perusahaan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="legal-entity-current-company-name">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Alamat Usaha</label>
+            </div>
+            <div class="td">
+              <input type="text" name="legal-entity-current-company-address">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">No. telepon kantor</label>
+            </div>
+            <div class="td">
+              <input type="text" name="legal-entity-current-company-phone-number">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Extension</label>
+            </div>
+            <div class="td">
+              <input type="text" name="legal-entity-current-company-phone-number-extension">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Provinsi</label>
+            </div>
+            <div class="td">
+              <input type="text" name="legal-entity-current-company-address-province">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kabupaten/Kota</label>
+            </div>
+            <div class="td">
+              <input type="text" name="legal-entity-current-company-address-city">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kode Pos</label>
+            </div>
+            <div class="td">
+              <input type="text" name="legal-entity-current-company-address-postal-code">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Bidang Usaha</label>
+            </div>
+            <div class="td">
+              <input type="text" name="legal-entity-current-company-industry">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Penghasilan perbulan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="legal-entity-current-company-income-per-month">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Tahun Perusahaan Berdiri</label>
+            </div>
+            <div class="td">
+              <input type="text" name="legal-entity-current-company-year-founded">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Jumlah Karyawan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="legal-entity-current-company-total-employees">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Status tempat usaha</label>
+            </div>
+            <div class="td">
+              <input type="text" name="legal-entity-current-company-ownership">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Data Pasangan
+        </h2>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nama</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-full-name">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Tempat / Tanggal Lahir</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-place-and-birth-date">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nomor KTP</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-id-number">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nama gadis Ibu kandung</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-mothers-maiden-name">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Alamat sesuai identitas</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-address">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">RT</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-residence-neighbourhood">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">RW</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-residence-commune">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kelurahan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-residence-village">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kecamatan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-residence-district">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Provinsi</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-residence-province">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kabupaten/Kota</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-residence-city">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kode Pos</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-residence-postal-code">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Alamat sesuai identitas</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-address">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">RT</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-residence-neighbourhood">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">RW</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-residence-commune">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kelurahan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-residence-village">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kecamatan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-residence-district">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Provinsi</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-residence-province">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kabupaten/Kota</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-residence-city">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kode Pos</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-residence-postal-code">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">No. Telepon / Handphone</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-home-phone-number">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nama Usaha / Kantor</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-company-name">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Alamat Usaha / Kantor</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-company-address">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">No. telepon kantor</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-company-phone-number">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Extension</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-company-phone-number-extension">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Provinsi</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-company-address-province">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kabupaten/Kota</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-company-address-city">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kode Pos</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-company-address-postal-code">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Bidang Usaha</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-company-industry">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Jabatan di Perusahaan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-company-position">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Lama usaha / lama bekerja</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-company-working-time-duration">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Penghasilan / gaji perbulan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="partner-current-company-income-per-month">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Data Penjamin
+        </h2>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nama</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-full-name">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Tempat / Tanggal Lahir</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-place-and-birth-date">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nomor KTP</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-id-number">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nama gadis Ibu kandung</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-mothers-maiden-name">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Alamat sesuai identitas</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-address">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">RT</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-residence-neighbourhood">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">RW</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-residence-commune">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kelurahan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-residence-village">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kecamatan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-residence-district">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Provinsi</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-residence-province">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kabupaten/Kota</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-residence-city">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kode Pos</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-residence-postal-code">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Alamat sesuai identitas</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-address">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">RT</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-residence-neighbourhood">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">RW</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-residence-commune">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kelurahan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-residence-village">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kecamatan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-residence-district">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Provinsi</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-residence-province">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kabupaten/Kota</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-residence-city">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kode Pos</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-residence-postal-code">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">No. Telepon / Handphone</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-home-phone-number">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nama Usaha / Kantor</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-company-name">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Alamat Usaha / Kantor</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-company-address">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">No. telepon kantor</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-company-phone-number">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Extension</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-company-phone-number-extension">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Provinsi</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-company-address-province">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kabupaten/Kota</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-company-address-city">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kode Pos</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-company-address-postal-code">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Bidang Usaha</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-company-industry">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Jabatan di Perusahaan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-company-position">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Lama usaha / lama bekerja</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-company-working-time-duration">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Penghasilan / gaji perbulan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="guarantor-current-company-income-per-month">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Kontak Darurat
+        </h2>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Nama</label>
+            </div>
+            <div class="td">
+              <input type="text" name="reference-full-name">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Hubungan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="reference-relationship">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Alamat tinggal saat ini</label>
+            </div>
+            <div class="td">
+              <input type="text" name="reference-address">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">RT</label>
+            </div>
+            <div class="td">
+              <input type="text" name="reference-residence-neighbourhood">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">RW</label>
+            </div>
+            <div class="td">
+              <input type="text" name="reference-residence-commune">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kelurahan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="reference-residence-village">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kecamatan</label>
+            </div>
+            <div class="td">
+              <input type="text" name="reference-residence-district">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Provinsi</label>
+            </div>
+            <div class="td">
+              <input type="text" name="reference-residence-province">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kabupaten/Kota</label>
+            </div>
+            <div class="td">
+              <input type="text" name="reference-residence-city">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">Kode Pos</label>
+            </div>
+            <div class="td">
+              <input type="text" name="reference-residence-postal-code">
+            </div>
+          </div>
+        </div>
+        <div class="section-content table responsive">
+          <div class="tr">
+            <div class="td">
+              <label for="applicant-full-name">No. Telepon / Handphone</label>
+            </div>
+            <div class="td">
+              <input type="text" name="reference-phone-number">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 
   <script src="/dist/js/vendors.js"></script>
