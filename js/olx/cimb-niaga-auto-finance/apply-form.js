@@ -10,10 +10,11 @@ exports.ready = function () {
   ];
 
   var formData = _.defaults({
-    productId: 'TODO: fill with real productId', // TODO: hardcode this with CNAF product id in db production.
+    productId: '56dd564889df9d09ac91b40a', // TODO: hardcode this with CNAF product id in db production.
     product: 'Retail Financing Mobil Bekas CIMB Niaga Auto Finance',
     productType: 'Kredit Mobil Bekas',
-    institution: 'CIMB Niaga Auto Finance'
+    institution: 'CIMB Niaga Auto Finance',
+    url: window.location.href
   });
 
   var inputSelector = _.template('input[name=<%= name %>]');
@@ -43,6 +44,8 @@ exports.ready = function () {
     var status = _.get('responseJSON.status', response);
 
     if (status === false) {
+      $form.find('.validation-error').addClass('hidden');
+
       _.each(function (value, key) {
         var selector = inputSelector({
           name: key
