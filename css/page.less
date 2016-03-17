@@ -1,0 +1,461 @@
+@import "variables.less";
+
+.cermati-row {
+  margin-left: -15px;
+  margin-right: -15px;
+
+  &:before, &:after {
+    display: table;
+    content: '';
+    clear: both;
+  }
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+.make-grid-columns();
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+.make-grid(xs);
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: @screen-sm-min) {
+  .make-grid(sm);
+
+  .hidden-sm {
+    display: none;
+  }
+}
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: @screen-md-min) {
+  .make-grid(md);
+
+  .container {
+    width: 970px;
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .hidden-xs {
+    display: none;
+  }
+}
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: @screen-lg-min) {
+  .make-grid(lg);
+
+  .container {
+    width: 1170px;
+  }
+}
+
+body,html {
+  margin: 0;
+  font-family: "Roboto", Helvetica, sans-serif;
+  color: #555;
+  font-size: 1em;
+
+  *, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+.container, .container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container, .container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 20px;
+}
+
+ul, ol {
+  -webkit-padding-start: 20px;
+
+  li {
+    margin-bottom: 5px;
+  }
+}
+
+header {
+  padding-top: 20px;
+  text-align: center;
+  img {
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 2.2em;
+    color: #007BC1;
+  }
+}
+
+table {
+  width: 100%;
+}
+
+.calculator-form {
+  margin-top: 20px;
+  border: 1px solid #ED1717;
+  position: relative;
+  .form-title {
+    display: inline-block;
+    background: #ED1717;
+    font-size: 1.1em;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 30px;
+    text-align: center;
+    position: relative;
+    margin-top: -20px;
+    height: 40px;
+    left: -1px;
+    color: #fff;
+    i {
+      background: #BB0305;
+      position: absolute;
+      display: inline-block;
+      width: 20px;
+      height: 39px;
+      right: -20px;
+      top: 0;
+    }
+    i:before, &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: -20px;
+      top: 0;
+      border-style: solid;
+      border-width: 19px 0 19px 20px;
+      border-color: transparent transparent transparent #ed1717;
+      line-height: 0;
+      _border-color: #000000 #000000 #000000 #ed1717;
+      _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+    }
+    i:before {
+      right: -20px;
+      border-color: transparent transparent transparent #BB0305;
+      _border-color: #000000 #000000 #000000 #BB0305;
+      _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+    }
+  }
+  
+  form {
+    padding: 20px;
+    margin: 0;
+
+    input, select, textarea {
+      border: 1px solid #ddd;
+      &:focus {
+        outline-color: transparent;
+        border-color: #9b9b9b;
+      }
+    }
+
+    input:not([type="submit"]), select {
+      width: 80%;
+      padding: 5px 10px;
+      background: #fff;
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-color: #fff;
+      background-image: url('../images/dropdown-icon.jpg');
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
+    }
+
+    .form-group {
+      padding-bottom: 12px;
+    }
+
+    table {
+      width: 100%;
+      td {
+        label {
+          vertical-align: 12px;
+        }
+      }
+    }
+  }
+}
+
+.form-container {
+  border: 1px solid #ddd;
+  .form-title {
+    font-size: 1.2em;
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  .form-content {
+    padding: 30px 20px;
+    table {
+      td {
+        span {
+          display: block;
+          font-size: .8em;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  padding: 12px 60px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background-color: #ed1717;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &.grey {
+    background-color: #AAAAAA;
+  }
+}
+
+.olx-logo {
+  img {
+    vertical-align: middle;
+  }
+  span {
+    font-size: 1.3em;
+    margin-left: 20px;
+  }
+}
+
+.ads {
+  max-width: 100%;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+#simulation-table {
+  width: 100%;
+  font-size: .8em;
+  border: none;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  thead {
+    background: #EEE;
+    td {
+      font-weight: bold;
+      color: red;
+    }
+  }
+
+  tr {
+    td:first-child {
+      text-align: left;
+      color: #636363;
+      font-weight: bold;
+    }
+
+    td {
+      text-align: center;
+      padding: 10px 30px;
+      border: 1px solid #ddd;
+    }
+
+    td p {
+      text-align: center;
+    }
+  }
+}
+
+.content-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content {
+  padding: 30px;
+
+  p {
+    text-align: justify;
+  }
+
+  h3 {
+    font-weight: 500;
+    color: #007BC1;
+  }
+
+  table {
+    width: 100%;
+    font-size: .8em;
+    border: none;
+    border-spacing: 0;
+    border-collapse: collapse;
+    thead {
+      background: #EEE;
+    }
+    td {
+      border: 1px solid #ddd;
+      padding: 10px 5px;
+    }
+    td p {
+      text-align: center;
+    }
+  }
+
+  em {
+    font-size: .8em;
+  }
+}
+
+.notification {
+  padding: 20px 30px;
+  font-size: 1.2em;
+  border-width: 1px;
+  border-style: dashed;
+
+  &.alert {
+    color: #c77169;
+    border-color: orange;
+    background: #fef7ba;
+
+    p {
+      color: #c77169;
+      margin: 0;
+    }
+
+    span {
+      color: #c65a0d;
+    }
+
+    em {
+      font-style: normal;
+      font-weight: bold;
+      color: #f00;
+    }
+  }
+}
+
+footer {
+  background: #2F2F2F;
+  color: #fff;
+  padding: 30px 0;
+  .powered {
+    span {
+      font-size: 1.2em;
+      margin-right: 10px;
+    }
+    span, img {
+      vertical-align: middle;
+    }
+
+    img {
+      height: 25px;
+    }
+  }
+
+  address {
+    font-size: .7em;
+    a {
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  header {
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+
+  .calculator-form {
+    .form-title {
+      font-size: 1.2em;
+    }
+
+    form {
+      table {
+        td:first-of-type {
+          width: 130px;
+        }
+      }
+
+      input, select {
+        width: 100%;
+      }
+    }
+  }
+
+  address {
+    margin-bottom: 20px;
+  }
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+
+.margin-bottom-40 {
+  margin-bottom: 40px;
+}
+
+*.no-margin {
+  margin: 0;
+}
+
+*.no-padding {
+  padding: 0;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}

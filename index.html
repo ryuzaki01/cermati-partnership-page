@@ -1,0 +1,260 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="id">
+    <meta content="notranslate" name="google">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"/>
+    <link href="dist/css/vendor.min.css" rel="stylesheet">
+    <link href="dist/css/all.min.css" rel="stylesheet">
+    <style>
+      .ui-autocomplete {
+        max-height: 200px;
+        overflow-y: auto;
+        /* prevent horizontal scrollbar */
+        overflow-x: hidden;
+      }
+      /* IE 6 doesn't support max-height
+       * we use height instead, but this forces the menu to always be this tall
+       */
+      * html .ui-autocomplete {
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="cermati-row">
+          <div class="cermati-col-xs-6 olx-logo text-left">
+            <img src="dist/images/olx.png"> <span class="hidden-xs">cara tepat jual cepat</span>
+          </div>
+          <div class="cermati-col-xs-6 text-right">
+            <img src="dist/images/powered%20by%20cermati.png">
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container-fluid secondary">
+      <div class="container no-padding">
+        <div class="cermati-row">
+          <div class="cermati-col-xs-12 margin-bottom-30">
+            <div class="cermati-row">
+              <div class="cermati-col-lg-offset-1 cermati-col-lg-6 cermati-col-md-7 cermati-col-sm-7">
+                <div class="calculator-form">
+                  <div class="form-title">
+                    Kalkulator Pinjaman
+                    <i></i>
+                  </div>
+                  <form>
+                    <table>
+                      <tr>
+                        <td width="150">
+                          <label for="price">Harga OTR</label>
+                        </td>
+                        <td>
+                          <div class="form-group">
+                            <input type="text" id="price" name="price"/>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="price">Down Payment</label>
+                        </td>
+                        <td>
+                          <div class="form-group">
+                            <input type="number" name="downPayment" />
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="price">Merek</label>
+                        </td>
+                        <td>
+                          <div class="form-group">
+                            <select name="car.model">
+                              <option value=""> - Pilih Model Mobil -</option>
+                              <option>Honda Jazz</option>
+                              <option>Mobilio</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="price">Tahun</label>
+                        </td>
+                        <td>
+                          <div class="form-group">
+                            <select name="car.year">
+                              <option value=""> - Pilih Tahun-</option>
+                              <option>2016</option>
+                              <option>2015</option>
+                              <option>2014</option>
+                              <option value="2013">2013 Kebawah</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="zone">Wilayah</label>
+                        </td>
+                        <td>
+                          <div class="form-group">
+                            <select id="zone" name="zone">
+                              <option value=""> - Pilih Wilayah -</option>
+                              <option value="1">Sumatra</option>
+                              <option value="2">Jawa</option>
+                              <option value="3">Lainnya</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="price">Asuransi</label>
+                        </td>
+                        <td>
+                          <div class="form-group">
+                            <select name="insuranceType">
+                              <option value="allrisk">All Risk</option>
+                              <option value="combination">Combination</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" align="right">
+                          <input type="submit" value="Hitung" class="btn"/>
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+                </div>
+              </div>
+              <div class="cermati-col-lg-4 cermati-col-md-5 cermati-col-sm-5 text-right hidden-xs">
+                <img class="ads" src="dist/images/iklan.png">
+              </div>
+            </div>
+          </div>
+          <div class="cermati-col-lg-12 cermati-col-xs-12 margin-bottom-30">
+            <div class="content-title">
+              Hasil Simulasi
+            </div>
+            <div class="table-container">
+              <table id="simulation-table">
+                <thead>
+                  <tr>
+                    <td>
+                      Tenor
+                    </td>
+                    <td>1 Tahun</td>
+                    <td>2 Tahun</td>
+                    <td>3 Tahun</td>
+                    <td>4 Tahun</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Total DP Bayar
+                    </td>
+                    <td>
+                      asdasdasd
+                    </td>
+                    <td>
+                      asdasdasd
+                    </td>
+                    <td>
+                      asdasdasd
+                    </td>
+                    <td>
+                      asdasdasd
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Angsuran
+                    </td>
+                    <td>
+                      asdasdasd
+                    </td>
+                    <td>
+                      asdasdasd
+                    </td>
+                    <td>
+                      asdasdasd
+                    </td>
+                    <td>
+                      asdasdasd
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid margin-bottom-40">
+      <div class="container no-padding">
+        <div class="cermati-row">
+          <div class="cermati-col-lg-12">
+            <div class="tabs">
+              <ul>
+                <li><a href="#tab-ajukan">Ajukan Sekarang</a></li>
+                <li><a href="#tab-persyaratan">Persyaratan</a></li>
+                <li><a href="#tab-fitur">Fitur</a></li>
+              </ul>
+
+              <div id="tab-ajukan">
+                <div id="fullform-notif" class="notification alert margin-bottom-20">
+                  <table>
+                    <tr>
+                      <td>
+                        <span>Dapatkan Potongan Harga Sebesar</span> <em>Rp 100.000</em>
+                        <p>dengan mengisi lengkap formulir</p>
+                      </td>
+                      <td class="text-right">
+                        <a class="btn grey">Isi form lengkap</a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="form-container">
+                  <div class="form-title">
+                    Formulir Aplikasi Pembiayaan
+                  </div>
+                  <div class="form-content">
+                    <table>
+                      <tr>
+                        <td>
+                          Nama Lengkap
+                          <span>* sesuai identitas</span>
+                        </td>
+                        <td>
+                          <input type="text" name="fullname">
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div id="tab-persyaratan">
+                asdasdsadad
+              </div>
+              <div id="tab-fitur">
+                asdasdsadad
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="dist/js/vendors.js"></script>
+    <script type="text/javascript" src="  dist/js/main.js"></script>
+  </body>
+</html>
