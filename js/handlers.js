@@ -12,23 +12,15 @@ module.exports = {
   },
 
   handleAutoCompleteCity: function () {
-    var cities = [];
-    $.ajax({
-      url: 'data/cities.json',
-      dataType: 'json',
-      cache: false,
-      success: function (data) {
-        cities = data;
-      }
-    });
     var $input = $('input[name="city"]');
+
     if ($input.length > 0) {
       $input.autocomplete({
         delay: 0,
         minLength: 0,
         source: function (request, response) {
           var regex = new RegExp(request.term, 'i');
-          response($.map(cities, function (item) {
+          response($.map(App.cities, function (item) {
             if (regex.test(item.name) || request.term === '') {
               return {
                 label: item.name,
@@ -51,8 +43,8 @@ module.exports = {
 
           if (ui.item && ui.item !== '') {
             // Validate city
-            for (var i in cities) {
-              if (ui.item.value === cities[i].name) {
+            for (var i in App.cities) {
+              if (ui.item.value === App.cities[i].name) {
                 validated = true;
               }
             }
