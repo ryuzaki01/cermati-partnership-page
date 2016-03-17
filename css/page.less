@@ -114,6 +114,7 @@ header {
 
 table {
   width: 100%;
+  border-collapse: collapse;
 }
 
 .ui-autocomplete {
@@ -127,6 +128,32 @@ table {
  */
 * html .ui-autocomplete {
   height: 200px;
+}
+
+input:not([type="submit"]), select, textarea {
+  width: 100%;
+  padding: 5px 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  &:focus {
+    outline-color: transparent;
+    border-color: #9b9b9b;
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url('../images/dropdown-icon.jpg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+.form-group {
+  padding-bottom: 12px;
 }
 
 .calculator-form {
@@ -180,42 +207,12 @@ table {
     padding: 20px;
     margin: 0;
 
-    input, select, textarea {
-      border: 1px solid #ddd;
-      &:focus {
-        outline-color: transparent;
-        border-color: #9b9b9b;
-      }
-    }
-
-    input:not([type="submit"]), select {
+    input:not([type="submit"]), select, textarea {
       width: 80%;
-      padding: 5px 10px;
-      background: #fff;
     }
 
-    select {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      background-color: #fff;
-      background-image: url('../images/dropdown-icon.jpg');
-      background-repeat: no-repeat;
-      background-position: right;
-      background-size: contain;
-    }
-
-    .form-group {
-      padding-bottom: 12px;
-    }
-
-    table {
-      width: 100%;
-      td {
-        label {
-          vertical-align: 12px;
-        }
-      }
+    label {
+      vertical-align: 12px;
     }
   }
 }
@@ -229,18 +226,16 @@ table {
   }
   .form-content {
     padding: 30px 20px;
-    table {
-      td {
-        span {
-          display: block;
-          font-size: .8em;
-        }
-      }
+    span {
+      display: block;
+      font-size: .8em;
     }
   }
 }
 
 .btn {
+  display: inline-block;
+  white-space: nowrap;
   padding: 12px 60px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -349,6 +344,8 @@ table {
   }
 
   em {
+    display: inline-block;
+    white-space: nowrap;
     font-size: .8em;
   }
 }
@@ -378,6 +375,28 @@ table {
       font-weight: bold;
       color: #f00;
     }
+  }
+
+  table {
+    display: block;
+    >tbody {
+      display: block;
+      >tr {
+        display: block;
+        >td {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.info-container {
+  h2 {
+    font-size: 2em;
+    font-weight: normal;
+    margin: 0;
   }
 }
 
@@ -412,6 +431,10 @@ footer {
     h1 {
       font-size: 1.5em;
     }
+  }
+
+  table {
+
   }
 
   .calculator-form {
