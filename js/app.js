@@ -5,6 +5,7 @@ window.$ = $;
 
 var _ = require('lodash');
 var handlers = require('./handlers');
+var applyForm = require('./olx/cimb-niaga-auto-finance/apply-form');
 var completeForm = require('./olx/cimb-niaga-auto-finance/complete-form');
 var provinces = require('./data/provinces');
 var cities = require('./data/cities');
@@ -24,6 +25,7 @@ module.exports = {
       // Handlers
       handlers.handleTabs();
       handlers.handleAutoCompleteCity();
+      applyForm.ready();
       completeForm.ready();
     });
   }

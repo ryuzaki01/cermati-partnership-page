@@ -210,38 +210,107 @@
                   </table>
                 </div>
                 <div class="form-container margin-bottom-30">
-                  <div class="form-title">
-                    Formulir Aplikasi Pembiayaan
-                  </div>
-                  <div class="form-content">
-                    <div class="cermati-row">
-                      <div class="cermati-col-lg-offset-2 cermati-col-md-offset-1 cermati-col-lg-8 cermati-col-md-10 cermati-col-sm-12">
-                        <div class="cermati-row margin-bottom-10">
-                          <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12">
-                            Nama Lengkap
-                            <span>* sesuai identitas</span>
+                  <form id="apply-form" role="form">
+                    <div class="form-title">
+                      Formulir Aplikasi Pembiayaan
+                    </div>
+                    <div class="form-content">
+                      <div class="cermati-row">
+                        <div class="cermati-col-lg-offset-2 cermati-col-md-offset-1 cermati-col-lg-8 cermati-col-md-10 cermati-col-sm-12">
+                          <div class="cermati-row margin-bottom-10">
+                            <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12">
+                              Nama Lengkap
+                              <span>* sesuai identitas</span>
+                            </div>
+                            <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+                              <input type="text" name="name" id="name">
+                              <div class="validation-error hidden">
+                                Input tidak valid
+                              </div>
+                            </div>
                           </div>
-                          <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-                            <input type="text" name="fullname">
+
+                          <div class="cermati-row margin-bottom-10">
+                            <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12">
+                              Email
+                            </div>
+                            <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+                              <input type="email" name="email" id="email">
+                              <div class="validation-error hidden">
+                                Input tidak valid
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                        <div class="cermati-row margin-bottom-10">
-                          <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12">
-                            Nama Lengkap
-                            <span>* sesuai identitas</span>
+
+                          <div class="cermati-row margin-bottom-10">
+                            <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12">
+                              Kota
+                            </div>
+                            <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+                              <input type="text" name="city" id="city">
+                              <div class="validation-error hidden">
+                                Input tidak valid
+                              </div>
+                            </div>
                           </div>
-                          <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-                            <input type="text" name="fullname">
+
+                          <div class="cermati-row margin-bottom-10">
+                            <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12">
+                              Nomor Telepon
+                            </div>
+                            <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+                              <input type="text" name="phoneNumber" id="phone-number">
+                              <div class="validation-error hidden">
+                                Input tidak valid
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                        <div class="cermati-row margin-bottom-10 text-right">
-                          <div class="cermati-col-xs-12">
-                            <input type="submit" value="Kirim" class="btn" />
+
+                          <div class="cermati-row margin-bottom-10">
+                            <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12">
+                              Jumlah Pinjaman
+                            </div>
+                            <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+                              <input type="number" name="loanAmount" id="loan-amount">
+                              <div class="validation-error hidden">
+                                Input tidak valid
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="cermati-row margin-bottom-10">
+                            <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12">
+                              Tenor
+                            </div>
+                            <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+                              <input type="number" name="tenure" id="loan-tenure">
+                              <div class="validation-error hidden">
+                                Input tidak valid
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="cermati-row margin-bottom-10">
+                            <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12">
+                              Uang Muka (DP)
+                            </div>
+                            <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+                              <input type="number" name="downPayment" id="down-payment">
+                              <div class="validation-error hidden">
+                                Input tidak valid
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="cermati-row margin-bottom-10 text-right">
+                            <div class="cermati-col-xs-12">
+                              <input type="submit" value="Kirim" class="btn" />
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </form>
                 </div>
                 <div class="cermati-row">
                   <div class="info-container text-center cermati-col-lg-offset-2 cermati-col-md-offset-1 cermati-col-lg-8 cermati-col-md-10 cermati-col-sm-12">
@@ -263,6 +332,6 @@
     </div>
 
     <script type="text/javascript" src="dist/js/vendors.js"></script>
-    <script type="text/javascript" src="  dist/js/main.js"></script>
+    <script type="text/javascript" src="dist/js/main.js"></script>
   </body>
 </html>
