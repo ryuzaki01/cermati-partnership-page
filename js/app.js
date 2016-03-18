@@ -12,6 +12,8 @@ var cities = require('./data/cities');
 var cityMappings = require('./data/cityMappings');
 
 var $body = $('body');
+var $applyForm = $('#apply-form');
+var $completeForm = $('#complete-form-wrapper');
 
 module.exports = {
   isMobile: window.innerWidth <= 480,
@@ -26,11 +28,16 @@ module.exports = {
       handlers.handleTabs();
       handlers.handleAutoCompleteCity();
       applyForm.ready();
-      completeForm.ready();
+
+      // Load Complete Form
+      $completeForm.load(
+          'pages/olx/cimb-niaga-auto-finance/complete-form.html',
+          completeForm.ready
+      );
     });
   },
 
-  showLongForm: function () {
-
+  toggleCompleteForm: function () {
+    $completeForm.toggleClass('hidden');
   }
 };

@@ -55,6 +55,10 @@ exports.ready = function () {
     }
   };
 
+  var onSuccess = function (response) {
+
+  };
+
   $form.on('submit', function (event) {
     event.preventDefault();
 
@@ -72,7 +76,7 @@ exports.ready = function () {
       method: 'POST',
       data: postData,
       beforeSend: _.noop,
-      success: _.noop,
+      success: onSuccess,
       error: onError,
       complete: _.noop
     });

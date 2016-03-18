@@ -196,18 +196,18 @@
               </ul>
 
               <div id="tab-ajukan">
-                <div id="fullform-notif" class="notification alert margin-bottom-20">
+                <div id="discount-box" class="notification alert margin-bottom-20 hidden">
                   <div class="cermati-row">
                     <div class="cermati-col-md-7 cermati-col-sm-7 cermati-col-xs-12 xs-margin-bottom-20 xs-text-center">
                         <span>Dapatkan Potongan Harga Sebesar</span> <em>Rp 100.000</em>
                         <p>dengan mengisi lengkap formulir</p>
                     </div>
                     <div class="cermati-col-md-5 cermati-col-sm-5 cermati-col-xs-12 text-right xs-text-center">
-                      <a class="btn grey">Isi form lengkap</a>
+                      <a class="btn" onclick="App.toggleCompleteForm()">Isi form lengkap</a>
                     </div>
                   </div>
                 </div>
-                <div class="form-container margin-bottom-30">
+                <div id="form-container" class="form-container margin-bottom-30">
                   <form id="apply-form" role="form">
                     <div class="form-title">
                       Formulir Aplikasi Pembiayaan
@@ -273,8 +273,9 @@
                       </div>
                     </div>
                   </form>
+                  <div id="complete-form-wrapper" class="hidden"></div>
                 </div>
-                <div class="cermati-row">
+                <div class="cermati-row hidden" id="thankyou-box">
                   <div class="info-container text-center cermati-col-lg-offset-2 cermati-col-md-offset-1 cermati-col-lg-8 cermati-col-md-10 cermati-col-sm-12">
                     <h2>Terima Kasih</h2>
                     <p>Customer Service kami akan menghubungi Anda untuk mengkonfirmasi aplikasi Anda dan menjawab pertanyaan yang Anda miliki.</p>

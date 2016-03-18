@@ -759,6 +759,7 @@ textarea {
   padding: 5px 10px;
   background: #fff;
   border: 1px solid #ddd;
+  margin-bottom: 15px;
 }
 input:not([type="submit"]):focus,
 select:focus,
@@ -995,7 +996,12 @@ select {
 .validation-error {
   display: none;
   color: red;
-  font-size: .8em;
+  font-size: 13px;
+}
+.has-error input:not([type="submit"]),
+.has-error select,
+.has-error textarea {
+  margin-bottom: 0;
 }
 .has-error .validation-error {
   display: block;

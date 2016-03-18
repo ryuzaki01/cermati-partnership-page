@@ -175,6 +175,7 @@ input:not([type="submit"]), select, textarea {
   padding: 5px 10px;
   background: #fff;
   border: 1px solid #ddd;
+  margin-bottom: 15px;
   &:focus {
     outline-color: transparent;
     border-color: #9b9b9b;
@@ -440,10 +441,13 @@ select {
 .validation-error {
   display: none;
   color: red;
-  font-size: .8em;
+  font-size: 13px;
 }
 
 .has-error {
+  input:not([type="submit"]), select, textarea {
+    margin-bottom: 0;
+  }
   .validation-error {
     display: block;
   }
