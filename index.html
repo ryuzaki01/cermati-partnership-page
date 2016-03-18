@@ -199,8 +199,8 @@
                 <div id="discount-box" class="notification alert margin-bottom-20 hidden">
                   <div class="cermati-row">
                     <div class="cermati-col-md-7 cermati-col-sm-7 cermati-col-xs-12 xs-margin-bottom-20 xs-text-center">
-                        <span>Dapatkan Potongan Harga Sebesar</span> <em>Rp 100.000</em>
-                        <p>dengan mengisi lengkap formulir</p>
+                      <span>Dapatkan Potongan Harga Sebesar</span> <em>Rp 100.000</em>
+                      <p>dengan mengisi lengkap formulir</p>
                     </div>
                     <div class="cermati-col-md-5 cermati-col-sm-5 cermati-col-xs-12 text-right xs-text-center">
                       <a class="btn" onclick="App.toggleCompleteForm()">Isi form lengkap</a>
@@ -223,7 +223,7 @@
                             <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
                               <input type="text" name="name" id="name">
                               <div class="validation-error hidden">
-                                Input tidak valid
+                                Input nama tidak valid
                               </div>
                             </div>
                           </div>
@@ -235,7 +235,7 @@
                             <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
                               <input type="email" name="email" id="email">
                               <div class="validation-error hidden">
-                                Input tidak valid
+                                Input email tidak valid
                               </div>
                             </div>
                           </div>
@@ -247,7 +247,7 @@
                             <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
                               <input type="text" name="city" id="city">
                               <div class="validation-error hidden">
-                                Input tidak valid
+                                Input kota tidak valid
                               </div>
                             </div>
                           </div>
@@ -259,7 +259,51 @@
                             <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
                               <input type="text" name="phoneNumber" id="phone-number">
                               <div class="validation-error hidden">
-                                Input tidak valid
+                                Input nomor telepon tidak valid
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="cermati-row margin-bottom-10">
+                            <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12">
+                              Jumlah Pinjaman
+                            </div>
+                            <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+                              <input type="text" name="loanAmount" id="loan-amount">
+                              <div class="validation-error hidden">
+                                Input jumlah pinjaman tidak valid
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="cermati-row margin-bottom-10">
+                            <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12">
+                              Uang Muka (DP)
+                            </div>
+                            <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+                              <input type="text" name="downPayment" id="down-payment">
+                              <div class="validation-error hidden">
+                                Input uang muka tidak valid
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="cermati-row margin-bottom-10">
+                            <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12">
+                              Tenor (Lama Pinjaman)
+                            </div>
+                            <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+                              <select id="tenure" name="tenure">
+                                <option value="">-- Silahkan Pilih --</option>
+                                <option value="1">1 Tahun</option>
+                                <option value="2">2 Tahun</option>
+                                <option value="3">3 Tahun</option>
+                                <option value="4">4 Tahun</option>
+                              </select>
+                              <div class="validation-error hidden">
+                                Input tenor tidak valid
                               </div>
                             </div>
                           </div>

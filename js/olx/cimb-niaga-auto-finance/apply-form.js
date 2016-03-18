@@ -24,10 +24,13 @@ var formData = _.defaults({
 
 exports.ready = function () {
   var $form = $('#apply-form');
+  var $discountBox = $('#discount-box');
+  var $thankyouBox = $('#thankyou-box');
+
   var productOptionNames = [
     'loanAmount',
-    'tenure',
-    'downPayment'
+    'downPayment',
+    'tenure'
   ];
   var productOptions = _.flowRight(
     defaultProductOptions.concat.bind(defaultProductOptions),
@@ -53,7 +56,15 @@ exports.ready = function () {
   };
 
   var onSuccess = function (response) {
-
+    if (response.status === true) {
+      App.data = response.data;
+      $form.hide();
+      $discountBox.show();
+      $thankyouBox.show();
+    } else {
+      console.info('This should not happen, response is');
+      console.info(response);
+    }
   };
 
   $form.on('submit', function (event) {
