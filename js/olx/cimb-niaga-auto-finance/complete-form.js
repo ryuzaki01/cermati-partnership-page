@@ -2,6 +2,7 @@
 
 var $ = require('jquery');
 var _ = require('lodash/fp');
+var sprintf = require('sprintf-js').sprintf;
 
 var defaultOption = $.bind($, '<option value="">-- Silahkan Pilih --</option>');
 
@@ -62,6 +63,16 @@ var prepareSelectOptions = function () {
   });
 };
 
+var prepareSubmissionHandler = function () {
+  var fillFormAPI = _.flowRight(
+    App.url,
+    sprintf.bind(sprintf, '/api/applications/%s/fill-form')
+  );
+
+  var $form = $('#complete-form');
+};
+
 exports.ready = function () {
   prepareSelectOptions();
+  prepareSubmissionHandler();
 };

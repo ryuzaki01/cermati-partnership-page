@@ -1,13 +1,12 @@
 'use strict';
 
 var _ = require('lodash/fp');
+var sprintf = require('sprintf-js').sprintf;
 var $ = require('jquery');
 
-var inputSelector = _.template('input[name=<%= name %>]');
+var inputSelector = sprintf.bind(sprintf, 'input[name=%s]');
 var inputValue = function ($form, name) {
-  var selector = inputSelector({
-    name: name
-  });
+  var selector = inputSelector(name);
   return $form.find(selector).val();
 };
 
@@ -45,9 +44,7 @@ exports.ready = function () {
       $form.find('.has-error').removeClass('has-error');
 
       _.each(function (value, key) {
-        var selector = inputSelector({
-          name: key
-        });
+        var selector = inputSelector(key);
         $form.find(selector).parent().addClass('has-error');
       }, errorMessages);
     } else {
