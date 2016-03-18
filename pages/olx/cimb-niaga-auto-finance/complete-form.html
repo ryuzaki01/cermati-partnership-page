@@ -1,1660 +1,1632 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Language" content="id">
-    <meta content="notranslate" name="google">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"/>
-    <link href="/dist/css/vendor.min.css" rel="stylesheet">
-    <link href="/dist/css/all.min.css" rel="stylesheet">
-    <style>
-     .ui-autocomplete {
-       max-height: 200px;
-       overflow-y: auto;
-       /* prevent horizontal scrollbar */
-       overflow-x: hidden;
-     }
-     /* IE 6 doesn't support max-height
-      * we use height instead, but this forces the menu to always be this tall
-      */
-     * html .ui-autocomplete {
-       height: 200px;
-     }
-    </style>
-  </head>
-  <body>
-    <div class="yo-what">
-      <section>
-        <h2>
-          Data Pemohon
-        </h2>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-first-name">Nama Depan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="applicant-first-name" id="applicant-first-name">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-last-name">Nama Belakang</label>
-            </div>
-            <div class="td">
-              <input type="text" name="applicant-last-name" id="applicant-last-name">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-full-name-without-abbreviation">Nama lengkap tanpa singkatan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="applicant-full-name-without-abbreviation" id="applicant-full-name-without-abbreviation">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-id-number">Nomor KTP</label>
-            </div>
-            <div class="td">
-              <input type="number" name="applicant-id-number" id="applicant-id-number">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="taxpayer-identification-number">Nomor NPWP</label>
-            </div>
-            <div class="td">
-              <input type="number" name="taxpayer-identification-number" id="taxpayer-identification-number">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-place-of-birth-province">Provinsi Tempat Lahir</label>
-            </div>
-            <div class="td">
-              <select name="applicant-place-of-birth-province" id="applicant-place-of-birth-province" data-dependents="[&quot;applicant-place-of-birth-city&quot;]">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-place-of-birth-city">Kota Tempat Lahir</label>
-            </div>
-            <div class="td">
-              <select name="applicant-place-of-birth-city" id="applicant-place-of-birth-city" data-select-option-mapping="city">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-date-of-birth">Tanggal Lahir</label>
-            </div>
-            <div class="td">
-              <input type="date" name="applicant-date-of-birth" id="applicant-date-of-birth">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-gender">Jenis Kelamin</label>
-            </div>
-            <div class="td">
-              <select name="applicant-gender" id="applicant-gender">
-                <option value="">-- Silahkan Pilih --</option>
-                <option value="Pria">Pria</option>
-                <option value="Wanita">Wanita</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-last-education-level">Pendidikan</label>
-            </div>
-            <div class="td">
-              <select name="applicant-last-education-level" id="applicant-last-education-level">
-                <option value="">-- Silahkan Pilih --</option>
-                <option value="SD/SMP">SD/SMP</option>
-                <option value="SMA">SMA</option>
-                <option value="Akademi/D3">Akademi/D3</option>
-                <option value="S1">S1</option>
-                <option value="S2">S2</option>
-                <option value="S3">S3</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-mothers-maiden-name">Nama gadis Ibu Kandung</label>
-            </div>
-            <div class="td">
-              <input type="text" name="applicant-mothers-maiden-name" id="applicant-mothers-maiden-name">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-marriage-status">Status pernikahan</label>
-            </div>
-            <div class="td">
-              <select name="applicant-marriage-status" id="applicant-marriage-status">
-                <option value="">-- Silahkan Pilih --</option>
-                <option value="Menikah">Menikah</option>
-                <option value="Lajang">Lajang</option>
-                <option value="Cerai/Pisah">Cerai/Pisah</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-number-of-dependant">Jumlah tanggungan</label>
-            </div>
-            <div class="td">
-              <select name="applicant-number-of-dependant" id="applicant-number-of-dependant">
-                <option value="">-- Silahkan Pilih --</option>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-address">Alamat sesuai identitas</label>
-            </div>
-            <div class="td">
-              <input type="text" name="applicant-address" id="applicant-address">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-residence-neighbourhood">RT</label>
-            </div>
-            <div class="td">
-              <input type="number" name="applicant-residence-neighbourhood" id="applicant-residence-neighbourhood">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-residence-commune">RW</label>
-            </div>
-            <div class="td">
-              <input type="number" name="applicant-residence-commune" id="applicant-residence-commune">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-residence-village">Kelurahan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="applicant-residence-village" id="applicant-residence-village">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-residence-district">Kecamatan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="applicant-residence-district" id="applicant-residence-district">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-residence-province">Provinsi</label>
-            </div>
-            <div class="td">
-              <select name="applicant-residence-province" id="applicant-residence-province" data-dependents="[&quot;applicant-residence-city&quot;]">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-residence-city">Kabupaten/Kota</label>
-            </div>
-            <div class="td">
-              <select name="applicant-residence-city" id="applicant-residence-city" data-select-option-mapping="city">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-residence-postal-code">Kode Pos</label>
-            </div>
-            <div class="td">
-              <input type="number" name="applicant-residence-postal-code" id="applicant-residence-postal-code">
-            </div>
-          </div>
-        </div>
-        <h3 class="section-sub-heading">Data Tempat Tinggal</h3>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-current-address">Alamat tinggal saat ini</label>
-            </div>
-            <div class="td">
-              <input type="text" name="applicant-current-address" id="applicant-current-address">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-current-residence-neighbourhood">RT</label>
-            </div>
-            <div class="td">
-              <input type="number" name="applicant-current-residence-neighbourhood" id="applicant-current-residence-neighbourhood">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-current-residence-commune">RW</label>
-            </div>
-            <div class="td">
-              <input type="number" name="applicant-current-residence-commune" id="applicant-current-residence-commune">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-current-residence-village">Kelurahan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="applicant-current-residence-village" id="applicant-current-residence-village">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-current-residence-district">Kecamatan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="applicant-current-residence-district" id="applicant-current-residence-district">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-current-residence-province">Provinsi</label>
-            </div>
-            <div class="td">
-              <select name="applicant-current-residence-province" id="applicant-current-residence-province" data-dependents="[&quot;applicant-current-residence-city&quot;]">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-current-residence-city">Kabupaten/Kota</label>
-            </div>
-            <div class="td">
-              <select name="applicant-current-residence-city" id="applicant-current-residence-city" data-select-option-mapping="city">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-current-residence-postal-code">Kode Pos</label>
-            </div>
-            <div class="td">
-              <input type="number" name="applicant-current-residence-postal-code" id="applicant-current-residence-postal-code">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-residence-ownership-status">Status Kepemilikan Rumah</label>
-            </div>
-            <div class="td">
-              <select name="applicant-residence-ownership-status" id="applicant-residence-ownership-status">
-                <option value="">-- Silahkan Pilih --</option>
-                <option value="Sewa">Sewa</option>
-                <option value="Milik Perusahaan">Milik Perusahaan</option>
-                <option value="Angsuran">Angsuran</option>
-                <option value="Milik Sendiri">Milik Sendiri</option>
-                <option value="Milik Keluarga">Milik Keluarga</option>
-                <option value="Kost">Kost</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-home-phone-number">No. Telepon / Handphone</label>
-            </div>
-            <div class="td">
-              <input type="text" name="applicant-home-phone-number" id="applicant-home-phone-number">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-residence-time-duration">Lama tinggal</label>
-            </div>
-            <div class="td">
-              <input type="text" name="applicant-residence-time-duration" id="applicant-residence-time-duration">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="applicant-personal-email">Email</label>
-            </div>
-            <div class="td">
-              <input type="text" name="applicant-personal-email" id="applicant-personal-email">
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>
-          Data Pekerjaan Pemohon
-        </h2>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="type-of-jobs">Jenis Pekerjaan</label>
-            </div>
-            <div class="td">
-              <select name="type-of-jobs" id="type-of-jobs">
-                <option value="">-- Silahkan Pilih --</option>
-                <option value="PNS">PNS</option>
-                <option value="Swasta">Swasta</option>
-                <option value="Pensiunan PNS">Pensiunan PNS</option>
-                <option value="Pensiunan Biasa">Pensiunan Biasa</option>
-                <option value="TNI/Polisi">TNI/Polisi</option>
-                <option value="Wiraswasta">Wiraswasta</option>
-                <option value="Pelajar">Pelajar</option>
-                <option value="Tidak Bekerja">Tidak Bekerja</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="current-company-name">Nama Usaha / Kantor</label>
-            </div>
-            <div class="td">
-              <input type="text" name="current-company-name" id="current-company-name">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="current-company-address">Alamat Usaha / Kantor</label>
-            </div>
-            <div class="td">
-              <input type="text" name="current-company-address" id="current-company-address">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="current-company-phone-number">No. telepon kantor</label>
-            </div>
-            <div class="td">
-              <input type="text" name="current-company-phone-number" id="current-company-phone-number">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="current-company-phone-number-extension">Extension</label>
-            </div>
-            <div class="td">
-              <input type="text" name="current-company-phone-number-extension" id="current-company-phone-number-extension">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="current-company-address-province">Provinsi</label>
-            </div>
-            <div class="td">
-              <select name="current-company-address-province" id="current-company-address-province" data-dependents="[&quot;current-company-address-city&quot;]">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="current-company-address-city">Kabupaten/Kota</label>
-            </div>
-            <div class="td">
-              <select name="current-company-address-city" id="current-company-address-city" data-select-option-mapping="city">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="current-company-address-postal-code">Kode Pos</label>
-            </div>
-            <div class="td">
-              <input type="text" name="current-company-address-postal-code" id="current-company-address-postal-code">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="current-company-industry">Bidang Usaha</label>
-            </div>
-            <div class="td">
-              <select name="current-company-industry" id="current-company-industry">
-                <option value="">-- Silahkan Pilih --</option>
-                <option value="Retail">Retail</option>
-                <option value="Perdagangan">Perdagangan</option>
-                <option value="Transportasi">Transportasi</option>
-                <option value="Restoran/Bar/Cafe">Restoran/Bar/Cafe</option>
-                <option value="Kesehatan/Klinik">Kesehatan/Klinik</option>
-                <option value="Keuangan/Bank">Keuangan/Bank</option>
-                <option value="Kontraktor">Kontraktor</option>
-                <option value="Industri/Pabrik">Industri/Pabrik</option>
-                <option value="Pendidikan">Pendidikan</option>
-                <option value="Asuransi/Forex">Asuransi/Forex</option>
-                <option value="Konsultan">Konsultan</option>
-                <option value="Pemerintahan">Pemerintahan</option>
-                <option value="Pertambangan">Pertambangan</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="current-company-position">Jabatan di Perusahaan</label>
-            </div>
-            <div class="td">
-              <select name="current-company-position" id="current-company-position">
-                <option value="">-- Silahkan Pilih --</option>
-                <option value="Staf">Staf</option>
-                <option value="Supervisor">Supervisor</option>
-                <option value="Manajemen Junior">Manajemen Junior</option>
-                <option value="Manajemen Menengah">Manajemen Menengah</option>
-                <option value="Manajemen Senior">Manajemen Senior</option>
-                <option value="Direktur">Direktur</option>
-                <option value="Pemilik">Pemilik</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="current-company-working-time-duration">Lama usaha / lama bekerja</label>
-            </div>
-            <div class="td">
-              <input type="text" name="current-company-working-time-duration" id="current-company-working-time-duration">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="current-company-income-per-month">Penghasilan / gaji perbulan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="current-company-income-per-month" id="current-company-income-per-month">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="other-income-per-month">Penghasilan lain / gaji lain perbulan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="other-income-per-month" id="other-income-per-month">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="monthly-expense">Pengeluaran perbulan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="monthly-expense" id="monthly-expense">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="source-of-income-for-payment">Sumber penghasilan untuk pembayaran angsuran berasal dari</label>
-            </div>
-            <div class="td">
-              <select name="source-of-income-for-payment" id="source-of-income-for-payment">
-                <option value="">-- Silahkan Pilih --</option>
-                <option value="Penghasilan Pribadi">Penghasilan Pribadi</option>
-                <option value="Penghasilan Pasangan">Penghasilan Pasangan</option>
-                <option value="Penghasilan Gabungan (Joint Income)">Penghasilan Gabungan (Joint Income)</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>
-          Data Badan Hukum Pemohon
-        </h2>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="legal-entity-current-company-name">Nama Perusahaan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="legal-entity-current-company-name" id="legal-entity-current-company-name">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="legal-entity-current-company-address">Alamat Kantor / Usaha</label>
-            </div>
-            <div class="td">
-              <input type="text" name="legal-entity-current-company-address" id="legal-entity-current-company-address">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="legal-entity-current-company-phone-number">No. telepon kantor</label>
-            </div>
-            <div class="td">
-              <input type="text" name="legal-entity-current-company-phone-number" id="legal-entity-current-company-phone-number">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="legal-entity-current-company-phone-number-extension">Extension</label>
-            </div>
-            <div class="td">
-              <input type="text" name="legal-entity-current-company-phone-number-extension" id="legal-entity-current-company-phone-number-extension">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="legal-entity-current-company-address-province">Provinsi</label>
-            </div>
-            <div class="td">
-              <select name="legal-entity-current-company-address-province" id="legal-entity-current-company-address-province" data-dependents="[&quot;legal-entity-current-company-address-city&quot;]">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="legal-entity-current-company-address-city">Kabupaten/Kota</label>
-            </div>
-            <div class="td">
-              <select name="legal-entity-current-company-address-city" id="legal-entity-current-company-address-city" data-select-option-mapping="city">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="legal-entity-current-company-address-postal-code">Kode Pos</label>
-            </div>
-            <div class="td">
-              <input type="number" name="legal-entity-current-company-address-postal-code" id="legal-entity-current-company-address-postal-code">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="legal-entity-current-company-industry">Bidang Usaha</label>
-            </div>
-            <div class="td">
-              <select name="legal-entity-current-company-industry" id="legal-entity-current-company-industry">
-                <option value="">-- Silahkan Pilih --</option>
-                <option value="Retail">Retail</option>
-                <option value="Perdagangan">Perdagangan</option>
-                <option value="Transportasi">Transportasi</option>
-                <option value="Restoran/Bar/Cafe">Restoran/Bar/Cafe</option>
-                <option value="Kesehatan/Klinik">Kesehatan/Klinik</option>
-                <option value="Keuangan/Bank">Keuangan/Bank</option>
-                <option value="Kontraktor">Kontraktor</option>
-                <option value="Industri/Pabrik">Industri/Pabrik</option>
-                <option value="Pendidikan">Pendidikan</option>
-                <option value="Asuransi/Forex">Asuransi/Forex</option>
-                <option value="Konsultan">Konsultan</option>
-                <option value="Pemerintahan">Pemerintahan</option>
-                <option value="Pertambangan">Pertambangan</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="legal-entity-current-company-income-per-month">Penghasilan perbulan</label>
-            </div>
-            <div class="td">
-              <input type="number" name="legal-entity-current-company-income-per-month" id="legal-entity-current-company-income-per-month">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="legal-entity-current-company-year-founded">Tahun Perusahaan Berdiri</label>
-            </div>
-            <div class="td">
-              <input type="date" name="legal-entity-current-company-year-founded" id="legal-entity-current-company-year-founded">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="legal-entity-current-company-total-employees">Jumlah Karyawan</label>
-            </div>
-            <div class="td">
-              <input type="number" name="legal-entity-current-company-total-employees" id="legal-entity-current-company-total-employees">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="legal-entity-current-company-ownership">Status tempat usaha</label>
-            </div>
-            <div class="td">
-              <select name="legal-entity-current-company-ownership" id="legal-entity-current-company-ownership">
-                <option value="">-- Silahkan Pilih --</option>
-                <option value="Sendiri">Sendiri</option>
-                <option value="Keluarga">Keluarga</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>
-          Data Pasangan
-        </h2>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-full-name">Nama</label>
-            </div>
-            <div class="td">
-              <input type="text" name="partner-full-name" id="partner-full-name">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-place-and-birth-date">Tempat / Tanggal Lahir</label>
-            </div>
-            <div class="td">
-              <input type="text" name="partner-place-and-birth-date" id="partner-place-and-birth-date">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-id-number">Nomor KTP</label>
-            </div>
-            <div class="td">
-              <input type="number" name="partner-id-number" id="partner-id-number">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-mothers-maiden-name">Nama gadis Ibu kandung</label>
-            </div>
-            <div class="td">
-              <input type="text" name="partner-mothers-maiden-name" id="partner-mothers-maiden-name">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-address">Alamat sesuai identitas</label>
-            </div>
-            <div class="td">
-              <input type="text" name="partner-address" id="partner-address">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-residence-neighbourhood">RT</label>
-            </div>
-            <div class="td">
-              <input type="number" name="partner-residence-neighbourhood" id="partner-residence-neighbourhood">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-residence-commune">RW</label>
-            </div>
-            <div class="td">
-              <input type="number" name="partner-residence-commune" id="partner-residence-commune">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-residence-village">Kelurahan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="partner-residence-village" id="partner-residence-village">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-residence-district">Kecamatan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="partner-residence-district" id="partner-residence-district">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-residence-province">Provinsi</label>
-            </div>
-            <div class="td">
-              <select name="partner-residence-province" id="partner-residence-province" data-dependents="[&quot;partner-residence-city&quot;]">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-residence-city">Kabupaten/Kota</label>
-            </div>
-            <div class="td">
-              <select name="partner-residence-city" id="partner-residence-city" data-select-option-mapping="city">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-residence-postal-code">Kode Pos</label>
-            </div>
-            <div class="td">
-              <input type="number" name="partner-residence-postal-code" id="partner-residence-postal-code">
-            </div>
-          </div>
-        </div>
-        <h3 class="section-sub-heading">Data Tempat Tinggal Pasangan</h3>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-address">Alamat tinggal saat ini</label>
-            </div>
-            <div class="td">
-              <input type="text" name="partner-current-address" id="partner-current-address">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-residence-neighbourhood">RT</label>
-            </div>
-            <div class="td">
-              <input type="number" name="partner-current-residence-neighbourhood" id="partner-current-residence-neighbourhood">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-residence-commune">RW</label>
-            </div>
-            <div class="td">
-              <input type="number" name="partner-current-residence-commune" id="partner-current-residence-commune">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-residence-village">Kelurahan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="partner-current-residence-village" id="partner-current-residence-village">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-residence-district">Kecamatan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="partner-current-residence-district" id="partner-current-residence-district">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-residence-province">Provinsi</label>
-            </div>
-            <div class="td">
-              <select name="partner-current-residence-province" id="partner-current-residence-province" data-dependents="[&quot;partner-current-residence-city&quot;]">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-residence-city">Kabupaten/Kota</label>
-            </div>
-            <div class="td">
-              <select name="partner-current-residence-city" id="partner-current-residence-city" data-select-option-mapping="city">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-residence-postal-code">Kode Pos</label>
-            </div>
-            <div class="td">
-              <input type="number" name="partner-current-residence-postal-code" id="partner-current-residence-postal-code">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-home-phone-number">No. Telepon / Handphone</label>
-            </div>
-            <div class="td">
-              <input type="text" name="partner-home-phone-number" id="partner-home-phone-number">
-            </div>
-          </div>
-        </div>
-        <h3 class="section-sub-heading">Data Kantor Pasangan</h3>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-company-name">Nama Usaha / Kantor</label>
-            </div>
-            <div class="td">
-              <input type="text" name="partner-current-company-name" id="partner-current-company-name">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-company-address">Alamat Usaha / Kantor</label>
-            </div>
-            <div class="td">
-              <input type="text" name="partner-current-company-address" id="partner-current-company-address">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-company-phone-number">No. telepon kantor</label>
-            </div>
-            <div class="td">
-              <input type="text" name="partner-current-company-phone-number" id="partner-current-company-phone-number">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-company-phone-number-extension">Extension</label>
-            </div>
-            <div class="td">
-              <input type="text" name="partner-current-company-phone-number-extension" id="partner-current-company-phone-number-extension">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-company-address-province">Provinsi</label>
-            </div>
-            <div class="td">
-              <select name="partner-current-company-address-province" id="partner-current-company-address-province" data-dependents="[&quot;partner-current-company-address-city&quot;]">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-company-address-city">Kabupaten/Kota</label>
-            </div>
-            <div class="td">
-              <select name="partner-current-company-address-city" id="partner-current-company-address-city" data-select-option-mapping="city">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-company-address-postal-code">Kode Pos</label>
-            </div>
-            <div class="td">
-              <input type="number" name="partner-current-company-address-postal-code" id="partner-current-company-address-postal-code">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-company-industry">Bidang Usaha</label>
-            </div>
-            <div class="td">
-              <select name="partner-current-company-industry" id="partner-current-company-industry">
-                <option value="">-- Silahkan Pilih --</option>
-                <option value="Retail">Retail</option>
-                <option value="Perdagangan">Perdagangan</option>
-                <option value="Transportasi">Transportasi</option>
-                <option value="Restoran/Bar/Cafe">Restoran/Bar/Cafe</option>
-                <option value="Kesehatan/Klinik">Kesehatan/Klinik</option>
-                <option value="Keuangan/Bank">Keuangan/Bank</option>
-                <option value="Kontraktor">Kontraktor</option>
-                <option value="Industri/Pabrik">Industri/Pabrik</option>
-                <option value="Pendidikan">Pendidikan</option>
-                <option value="Asuransi/Forex">Asuransi/Forex</option>
-                <option value="Konsultan">Konsultan</option>
-                <option value="Pemerintahan">Pemerintahan</option>
-                <option value="Pertambangan">Pertambangan</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-company-position">Jabatan di Perusahaan</label>
-            </div>
-            <div class="td">
-              <select name="partner-current-company-position" id="partner-current-company-position">
-                <option value="">-- Silahkan Pilih --</option>
-                <option value="Staf">Staf</option>
-                <option value="Supervisor">Supervisor</option>
-                <option value="Manajemen Junior">Manajemen Junior</option>
-                <option value="Manajemen Menengah">Manajemen Menengah</option>
-                <option value="Manajemen Senior">Manajemen Senior</option>
-                <option value="Direktur">Direktur</option>
-                <option value="Pemilik">Pemilik</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-company-working-time-duration">Lama usaha / lama bekerja</label>
-            </div>
-            <div class="td">
-              <input type="text" name="partner-current-company-working-time-duration" id="partner-current-company-working-time-duration">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="partner-current-company-income-per-month">Penghasilan / gaji perbulan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="partner-current-company-income-per-month" id="partner-current-company-income-per-month">
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>
-          Data Penjamin
-        </h2>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-full-name">Nama</label>
-            </div>
-            <div class="td">
-              <input type="text" name="guarantor-full-name" id="guarantor-full-name">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-place-and-birth-date">Tempat / Tanggal Lahir</label>
-            </div>
-            <div class="td">
-              <input type="text" name="guarantor-place-and-birth-date" id="guarantor-place-and-birth-date">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-id-number">Nomor KTP</label>
-            </div>
-            <div class="td">
-              <input type="number" name="guarantor-id-number" id="guarantor-id-number">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-mothers-maiden-name">Nama gadis Ibu kandung</label>
-            </div>
-            <div class="td">
-              <input type="text" name="guarantor-mothers-maiden-name" id="guarantor-mothers-maiden-name">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-address">Alamat sesuai identitas</label>
-            </div>
-            <div class="td">
-              <input type="text" name="guarantor-address" id="guarantor-address">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-residence-neighbourhood">RT</label>
-            </div>
-            <div class="td">
-              <input type="number" name="guarantor-residence-neighbourhood" id="guarantor-residence-neighbourhood">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-residence-commune">RW</label>
-            </div>
-            <div class="td">
-              <input type="number" name="guarantor-residence-commune" id="guarantor-residence-commune">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-residence-village">Kelurahan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="guarantor-residence-village" id="guarantor-residence-village">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-residence-district">Kecamatan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="guarantor-residence-district" id="guarantor-residence-district">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-residence-province">Provinsi</label>
-            </div>
-            <div class="td">
-              <select name="guarantor-residence-province" id="guarantor-residence-province" data-dependents="[&quot;guarantor-residence-city&quot;]">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-residence-city">Kabupaten/Kota</label>
-            </div>
-            <div class="td">
-              <select name="guarantor-residence-city" id="guarantor-residence-city" data-select-option-mapping="city">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-residence-postal-code">Kode Pos</label>
-            </div>
-            <div class="td">
-              <input type="number" name="guarantor-residence-postal-code" id="guarantor-residence-postal-code">
-            </div>
-          </div>
-        </div>
-        <h3 class="section-sub-heading">Data Tempat Tinggal Penjamin</h3>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-address">Alamat tinggal saat ini</label>
-            </div>
-            <div class="td">
-              <input type="text" name="guarantor-current-address" id="guarantor-current-address">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-residence-neighbourhood">RT</label>
-            </div>
-            <div class="td">
-              <input type="number" name="guarantor-current-residence-neighbourhood" id="guarantor-current-residence-neighbourhood">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-residence-commune">RW</label>
-            </div>
-            <div class="td">
-              <input type="number" name="guarantor-current-residence-commune" id="guarantor-current-residence-commune">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-residence-village">Kelurahan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="guarantor-current-residence-village" id="guarantor-current-residence-village">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-residence-district">Kecamatan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="guarantor-current-residence-district" id="guarantor-current-residence-district">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-residence-province">Provinsi</label>
-            </div>
-            <div class="td">
-              <select name="guarantor-current-residence-province" id="guarantor-current-residence-province" data-dependents="[&quot;guarantor-current-residence-city&quot;]">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-residence-city">Kabupaten/Kota</label>
-            </div>
-            <div class="td">
-              <select name="guarantor-current-residence-city" id="guarantor-current-residence-city" data-select-option-mapping="city">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-residence-postal-code">Kode Pos</label>
-            </div>
-            <div class="td">
-              <input type="number" name="guarantor-current-residence-postal-code" id="guarantor-current-residence-postal-code">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-home-phone-number">No. Telepon / Handphone</label>
-            </div>
-            <div class="td">
-              <input type="text" name="guarantor-home-phone-number" id="guarantor-home-phone-number">
-            </div>
-          </div>
-        </div>
-        <h3 class="section-sub-heading">Data Kantor Penjamin</h3>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-company-name">Nama Usaha / Kantor</label>
-            </div>
-            <div class="td">
-              <input type="text" name="guarantor-current-company-name" id="guarantor-current-company-name">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-company-address">Alamat Usaha / Kantor</label>
-            </div>
-            <div class="td">
-              <input type="text" name="guarantor-current-company-address" id="guarantor-current-company-address">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-company-phone-number">No. telepon kantor</label>
-            </div>
-            <div class="td">
-              <input type="text" name="guarantor-current-company-phone-number" id="guarantor-current-company-phone-number">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-company-phone-number-extension">Extension</label>
-            </div>
-            <div class="td">
-              <input type="text" name="guarantor-current-company-phone-number-extension" id="guarantor-current-company-phone-number-extension">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-company-address-province">Provinsi</label>
-            </div>
-            <div class="td">
-              <select name="guarantor-current-company-address-province" id="guarantor-current-company-address-province" data-dependents="[&quot;guarantor-current-company-address-city&quot;]">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-company-address-city">Kabupaten/Kota</label>
-            </div>
-            <div class="td">
-              <select name="guarantor-current-company-address-city" id="guarantor-current-company-address-city" data-select-option-mapping="city">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-company-address-postal-code">Kode Pos</label>
-            </div>
-            <div class="td">
-              <input type="number" name="guarantor-current-company-address-postal-code" id="guarantor-current-company-address-postal-code">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-company-industry">Bidang Usaha</label>
-            </div>
-            <div class="td">
-              <select name="guarantor-current-company-industry" id="guarantor-current-company-industry">
-                <option value="">-- Silahkan Pilih --</option>
-                <option value="Retail">Retail</option>
-                <option value="Perdagangan">Perdagangan</option>
-                <option value="Transportasi">Transportasi</option>
-                <option value="Restoran/Bar/Cafe">Restoran/Bar/Cafe</option>
-                <option value="Kesehatan/Klinik">Kesehatan/Klinik</option>
-                <option value="Keuangan/Bank">Keuangan/Bank</option>
-                <option value="Kontraktor">Kontraktor</option>
-                <option value="Industri/Pabrik">Industri/Pabrik</option>
-                <option value="Pendidikan">Pendidikan</option>
-                <option value="Asuransi/Forex">Asuransi/Forex</option>
-                <option value="Konsultan">Konsultan</option>
-                <option value="Pemerintahan">Pemerintahan</option>
-                <option value="Pertambangan">Pertambangan</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-company-position">Jabatan di Perusahaan</label>
-            </div>
-            <div class="td">
-              <select name="guarantor-current-company-position" id="guarantor-current-company-position">
-                <option value="">-- Silahkan Pilih --</option>
-                <option value="Staf">Staf</option>
-                <option value="Supervisor">Supervisor</option>
-                <option value="Manajemen Junior">Manajemen Junior</option>
-                <option value="Manajemen Menengah">Manajemen Menengah</option>
-                <option value="Manajemen Senior">Manajemen Senior</option>
-                <option value="Direktur">Direktur</option>
-                <option value="Pemilik">Pemilik</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-company-working-time-duration">Lama usaha / lama bekerja</label>
-            </div>
-            <div class="td">
-              <input type="text" name="guarantor-current-company-working-time-duration" id="guarantor-current-company-working-time-duration">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="guarantor-current-company-income-per-month">Penghasilan / gaji perbulan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="guarantor-current-company-income-per-month" id="guarantor-current-company-income-per-month">
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>
-          Kontak Darurat
-        </h2>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="reference-full-name">Nama</label>
-            </div>
-            <div class="td">
-              <input type="text" name="reference-full-name" id="reference-full-name">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="reference-relationship">Hubungan</label>
-            </div>
-            <div class="td">
-              <select name="reference-relationship" id="reference-relationship">
-                <option value="">-- Silahkan Pilih --</option>
-                <option value="Orang Tua">Orang Tua</option>
-                <option value="Anak">Anak</option>
-                <option value="Saudara Kandung">Saudara Kandung</option>
-                <option value="Sepupu">Sepupu</option>
-                <option value="Om/Tante/Keponakan">Om/Tante/Keponakan</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="reference-address">Alamat tinggal saat ini</label>
-            </div>
-            <div class="td">
-              <input type="text" name="reference-address" id="reference-address">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="reference-residence-neighbourhood">RT</label>
-            </div>
-            <div class="td">
-              <input type="number" name="reference-residence-neighbourhood" id="reference-residence-neighbourhood">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="reference-residence-commune">RW</label>
-            </div>
-            <div class="td">
-              <input type="number" name="reference-residence-commune" id="reference-residence-commune">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="reference-residence-village">Kelurahan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="reference-residence-village" id="reference-residence-village">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="reference-residence-district">Kecamatan</label>
-            </div>
-            <div class="td">
-              <input type="text" name="reference-residence-district" id="reference-residence-district">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="reference-residence-province">Provinsi</label>
-            </div>
-            <div class="td">
-              <select name="reference-residence-province" id="reference-residence-province" data-dependents="[&quot;reference-residence-city&quot;]">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="reference-residence-city">Kabupaten/Kota</label>
-            </div>
-            <div class="td">
-              <select name="reference-residence-city" id="reference-residence-city" data-select-option-mapping="city">
-                <option value="">-- Silahkan Pilih --</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="reference-residence-postal-code">Kode Pos</label>
-            </div>
-            <div class="td">
-              <input type="number" name="reference-residence-postal-code" id="reference-residence-postal-code">
-            </div>
-          </div>
-        </div>
-        <div class="section-content table responsive">
-          <div class="tr">
-            <div class="td">
-              <label for="reference-phone-number">No. Telepon / Handphone</label>
-            </div>
-            <div class="td">
-              <input type="text" name="reference-phone-number" id="reference-phone-number">
-            </div>
-          </div>
-        </div>
-      </section>
+<div id="cimb-complete-form">
+  <section>
+    <h2>
+      Data Pemohon
+    </h2>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-first-name">Nama Depan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="applicant-first-name" id="applicant-first-name">
+        </div>
+      </div>
     </div>
-  </body>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-last-name">Nama Belakang</label>
+        </div>
+        <div class="td">
+          <input type="text" name="applicant-last-name" id="applicant-last-name">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-full-name-without-abbreviation">Nama lengkap tanpa singkatan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="applicant-full-name-without-abbreviation" id="applicant-full-name-without-abbreviation">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-id-number">Nomor KTP</label>
+        </div>
+        <div class="td">
+          <input type="number" name="applicant-id-number" id="applicant-id-number">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="taxpayer-identification-number">Nomor NPWP</label>
+        </div>
+        <div class="td">
+          <input type="number" name="taxpayer-identification-number" id="taxpayer-identification-number">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-place-of-birth-province">Provinsi Tempat Lahir</label>
+        </div>
+        <div class="td">
+          <select name="applicant-place-of-birth-province" id="applicant-place-of-birth-province" data-dependents="[&quot;applicant-place-of-birth-city&quot;]">
+            <option value="">-- Silahkan Pilih --</option>
 
-  <script src="/dist/js/vendors.js"></script>
-  <script src="/dist/js/main.js"></script>
-</html>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-place-of-birth-city">Kota Tempat Lahir</label>
+        </div>
+        <div class="td">
+          <select name="applicant-place-of-birth-city" id="applicant-place-of-birth-city" data-select-option-mapping="city">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-date-of-birth">Tanggal Lahir</label>
+        </div>
+        <div class="td">
+          <input type="date" name="applicant-date-of-birth" id="applicant-date-of-birth">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-gender">Jenis Kelamin</label>
+        </div>
+        <div class="td">
+          <select name="applicant-gender" id="applicant-gender">
+            <option value="">-- Silahkan Pilih --</option>
+            <option value="Pria">Pria</option>
+            <option value="Wanita">Wanita</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-last-education-level">Pendidikan</label>
+        </div>
+        <div class="td">
+          <select name="applicant-last-education-level" id="applicant-last-education-level">
+            <option value="">-- Silahkan Pilih --</option>
+            <option value="SD/SMP">SD/SMP</option>
+            <option value="SMA">SMA</option>
+            <option value="Akademi/D3">Akademi/D3</option>
+            <option value="S1">S1</option>
+            <option value="S2">S2</option>
+            <option value="S3">S3</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-mothers-maiden-name">Nama gadis Ibu Kandung</label>
+        </div>
+        <div class="td">
+          <input type="text" name="applicant-mothers-maiden-name" id="applicant-mothers-maiden-name">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-marriage-status">Status pernikahan</label>
+        </div>
+        <div class="td">
+          <select name="applicant-marriage-status" id="applicant-marriage-status">
+            <option value="">-- Silahkan Pilih --</option>
+            <option value="Menikah">Menikah</option>
+            <option value="Lajang">Lajang</option>
+            <option value="Cerai/Pisah">Cerai/Pisah</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-number-of-dependant">Jumlah tanggungan</label>
+        </div>
+        <div class="td">
+          <select name="applicant-number-of-dependant" id="applicant-number-of-dependant">
+            <option value="">-- Silahkan Pilih --</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-address">Alamat sesuai identitas</label>
+        </div>
+        <div class="td">
+          <input type="text" name="applicant-address" id="applicant-address">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-residence-neighbourhood">RT</label>
+        </div>
+        <div class="td">
+          <input type="number" name="applicant-residence-neighbourhood" id="applicant-residence-neighbourhood">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-residence-commune">RW</label>
+        </div>
+        <div class="td">
+          <input type="number" name="applicant-residence-commune" id="applicant-residence-commune">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-residence-village">Kelurahan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="applicant-residence-village" id="applicant-residence-village">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-residence-district">Kecamatan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="applicant-residence-district" id="applicant-residence-district">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-residence-province">Provinsi</label>
+        </div>
+        <div class="td">
+          <select name="applicant-residence-province" id="applicant-residence-province" data-dependents="[&quot;applicant-residence-city&quot;]">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-residence-city">Kabupaten/Kota</label>
+        </div>
+        <div class="td">
+          <select name="applicant-residence-city" id="applicant-residence-city" data-select-option-mapping="city">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-residence-postal-code">Kode Pos</label>
+        </div>
+        <div class="td">
+          <input type="number" name="applicant-residence-postal-code" id="applicant-residence-postal-code">
+        </div>
+      </div>
+    </div>
+    <h3 class="section-sub-heading">Data Tempat Tinggal</h3>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-current-address">Alamat tinggal saat ini</label>
+        </div>
+        <div class="td">
+          <input type="text" name="applicant-current-address" id="applicant-current-address">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-current-residence-neighbourhood">RT</label>
+        </div>
+        <div class="td">
+          <input type="number" name="applicant-current-residence-neighbourhood" id="applicant-current-residence-neighbourhood">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-current-residence-commune">RW</label>
+        </div>
+        <div class="td">
+          <input type="number" name="applicant-current-residence-commune" id="applicant-current-residence-commune">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-current-residence-village">Kelurahan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="applicant-current-residence-village" id="applicant-current-residence-village">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-current-residence-district">Kecamatan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="applicant-current-residence-district" id="applicant-current-residence-district">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-current-residence-province">Provinsi</label>
+        </div>
+        <div class="td">
+          <select name="applicant-current-residence-province" id="applicant-current-residence-province" data-dependents="[&quot;applicant-current-residence-city&quot;]">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-current-residence-city">Kabupaten/Kota</label>
+        </div>
+        <div class="td">
+          <select name="applicant-current-residence-city" id="applicant-current-residence-city" data-select-option-mapping="city">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-current-residence-postal-code">Kode Pos</label>
+        </div>
+        <div class="td">
+          <input type="number" name="applicant-current-residence-postal-code" id="applicant-current-residence-postal-code">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-residence-ownership-status">Status Kepemilikan Rumah</label>
+        </div>
+        <div class="td">
+          <select name="applicant-residence-ownership-status" id="applicant-residence-ownership-status">
+            <option value="">-- Silahkan Pilih --</option>
+            <option value="Sewa">Sewa</option>
+            <option value="Milik Perusahaan">Milik Perusahaan</option>
+            <option value="Angsuran">Angsuran</option>
+            <option value="Milik Sendiri">Milik Sendiri</option>
+            <option value="Milik Keluarga">Milik Keluarga</option>
+            <option value="Kost">Kost</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-home-phone-number">No. Telepon / Handphone</label>
+        </div>
+        <div class="td">
+          <input type="text" name="applicant-home-phone-number" id="applicant-home-phone-number">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-residence-time-duration">Lama tinggal</label>
+        </div>
+        <div class="td">
+          <input type="text" name="applicant-residence-time-duration" id="applicant-residence-time-duration">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="applicant-personal-email">Email</label>
+        </div>
+        <div class="td">
+          <input type="text" name="applicant-personal-email" id="applicant-personal-email">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>
+      Data Pekerjaan Pemohon
+    </h2>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="type-of-jobs">Jenis Pekerjaan</label>
+        </div>
+        <div class="td">
+          <select name="type-of-jobs" id="type-of-jobs">
+            <option value="">-- Silahkan Pilih --</option>
+            <option value="PNS">PNS</option>
+            <option value="Swasta">Swasta</option>
+            <option value="Pensiunan PNS">Pensiunan PNS</option>
+            <option value="Pensiunan Biasa">Pensiunan Biasa</option>
+            <option value="TNI/Polisi">TNI/Polisi</option>
+            <option value="Wiraswasta">Wiraswasta</option>
+            <option value="Pelajar">Pelajar</option>
+            <option value="Tidak Bekerja">Tidak Bekerja</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="current-company-name">Nama Usaha / Kantor</label>
+        </div>
+        <div class="td">
+          <input type="text" name="current-company-name" id="current-company-name">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="current-company-address">Alamat Usaha / Kantor</label>
+        </div>
+        <div class="td">
+          <input type="text" name="current-company-address" id="current-company-address">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="current-company-phone-number">No. telepon kantor</label>
+        </div>
+        <div class="td">
+          <input type="text" name="current-company-phone-number" id="current-company-phone-number">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="current-company-phone-number-extension">Extension</label>
+        </div>
+        <div class="td">
+          <input type="text" name="current-company-phone-number-extension" id="current-company-phone-number-extension">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="current-company-address-province">Provinsi</label>
+        </div>
+        <div class="td">
+          <select name="current-company-address-province" id="current-company-address-province" data-dependents="[&quot;current-company-address-city&quot;]">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="current-company-address-city">Kabupaten/Kota</label>
+        </div>
+        <div class="td">
+          <select name="current-company-address-city" id="current-company-address-city" data-select-option-mapping="city">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="current-company-address-postal-code">Kode Pos</label>
+        </div>
+        <div class="td">
+          <input type="text" name="current-company-address-postal-code" id="current-company-address-postal-code">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="current-company-industry">Bidang Usaha</label>
+        </div>
+        <div class="td">
+          <select name="current-company-industry" id="current-company-industry">
+            <option value="">-- Silahkan Pilih --</option>
+            <option value="Retail">Retail</option>
+            <option value="Perdagangan">Perdagangan</option>
+            <option value="Transportasi">Transportasi</option>
+            <option value="Restoran/Bar/Cafe">Restoran/Bar/Cafe</option>
+            <option value="Kesehatan/Klinik">Kesehatan/Klinik</option>
+            <option value="Keuangan/Bank">Keuangan/Bank</option>
+            <option value="Kontraktor">Kontraktor</option>
+            <option value="Industri/Pabrik">Industri/Pabrik</option>
+            <option value="Pendidikan">Pendidikan</option>
+            <option value="Asuransi/Forex">Asuransi/Forex</option>
+            <option value="Konsultan">Konsultan</option>
+            <option value="Pemerintahan">Pemerintahan</option>
+            <option value="Pertambangan">Pertambangan</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="current-company-position">Jabatan di Perusahaan</label>
+        </div>
+        <div class="td">
+          <select name="current-company-position" id="current-company-position">
+            <option value="">-- Silahkan Pilih --</option>
+            <option value="Staf">Staf</option>
+            <option value="Supervisor">Supervisor</option>
+            <option value="Manajemen Junior">Manajemen Junior</option>
+            <option value="Manajemen Menengah">Manajemen Menengah</option>
+            <option value="Manajemen Senior">Manajemen Senior</option>
+            <option value="Direktur">Direktur</option>
+            <option value="Pemilik">Pemilik</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="current-company-working-time-duration">Lama usaha / lama bekerja</label>
+        </div>
+        <div class="td">
+          <input type="text" name="current-company-working-time-duration" id="current-company-working-time-duration">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="current-company-income-per-month">Penghasilan / gaji perbulan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="current-company-income-per-month" id="current-company-income-per-month">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="other-income-per-month">Penghasilan lain / gaji lain perbulan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="other-income-per-month" id="other-income-per-month">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="monthly-expense">Pengeluaran perbulan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="monthly-expense" id="monthly-expense">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="source-of-income-for-payment">Sumber penghasilan untuk pembayaran angsuran berasal dari</label>
+        </div>
+        <div class="td">
+          <select name="source-of-income-for-payment" id="source-of-income-for-payment">
+            <option value="">-- Silahkan Pilih --</option>
+            <option value="Penghasilan Pribadi">Penghasilan Pribadi</option>
+            <option value="Penghasilan Pasangan">Penghasilan Pasangan</option>
+            <option value="Penghasilan Gabungan (Joint Income)">Penghasilan Gabungan (Joint Income)</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>
+      Data Badan Hukum Pemohon
+    </h2>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="legal-entity-current-company-name">Nama Perusahaan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="legal-entity-current-company-name" id="legal-entity-current-company-name">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="legal-entity-current-company-address">Alamat Kantor / Usaha</label>
+        </div>
+        <div class="td">
+          <input type="text" name="legal-entity-current-company-address" id="legal-entity-current-company-address">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="legal-entity-current-company-phone-number">No. telepon kantor</label>
+        </div>
+        <div class="td">
+          <input type="text" name="legal-entity-current-company-phone-number" id="legal-entity-current-company-phone-number">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="legal-entity-current-company-phone-number-extension">Extension</label>
+        </div>
+        <div class="td">
+          <input type="text" name="legal-entity-current-company-phone-number-extension" id="legal-entity-current-company-phone-number-extension">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="legal-entity-current-company-address-province">Provinsi</label>
+        </div>
+        <div class="td">
+          <select name="legal-entity-current-company-address-province" id="legal-entity-current-company-address-province" data-dependents="[&quot;legal-entity-current-company-address-city&quot;]">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="legal-entity-current-company-address-city">Kabupaten/Kota</label>
+        </div>
+        <div class="td">
+          <select name="legal-entity-current-company-address-city" id="legal-entity-current-company-address-city" data-select-option-mapping="city">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="legal-entity-current-company-address-postal-code">Kode Pos</label>
+        </div>
+        <div class="td">
+          <input type="number" name="legal-entity-current-company-address-postal-code" id="legal-entity-current-company-address-postal-code">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="legal-entity-current-company-industry">Bidang Usaha</label>
+        </div>
+        <div class="td">
+          <select name="legal-entity-current-company-industry" id="legal-entity-current-company-industry">
+            <option value="">-- Silahkan Pilih --</option>
+            <option value="Retail">Retail</option>
+            <option value="Perdagangan">Perdagangan</option>
+            <option value="Transportasi">Transportasi</option>
+            <option value="Restoran/Bar/Cafe">Restoran/Bar/Cafe</option>
+            <option value="Kesehatan/Klinik">Kesehatan/Klinik</option>
+            <option value="Keuangan/Bank">Keuangan/Bank</option>
+            <option value="Kontraktor">Kontraktor</option>
+            <option value="Industri/Pabrik">Industri/Pabrik</option>
+            <option value="Pendidikan">Pendidikan</option>
+            <option value="Asuransi/Forex">Asuransi/Forex</option>
+            <option value="Konsultan">Konsultan</option>
+            <option value="Pemerintahan">Pemerintahan</option>
+            <option value="Pertambangan">Pertambangan</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="legal-entity-current-company-income-per-month">Penghasilan perbulan</label>
+        </div>
+        <div class="td">
+          <input type="number" name="legal-entity-current-company-income-per-month" id="legal-entity-current-company-income-per-month">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="legal-entity-current-company-year-founded">Tahun Perusahaan Berdiri</label>
+        </div>
+        <div class="td">
+          <input type="date" name="legal-entity-current-company-year-founded" id="legal-entity-current-company-year-founded">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="legal-entity-current-company-total-employees">Jumlah Karyawan</label>
+        </div>
+        <div class="td">
+          <input type="number" name="legal-entity-current-company-total-employees" id="legal-entity-current-company-total-employees">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="legal-entity-current-company-ownership">Status tempat usaha</label>
+        </div>
+        <div class="td">
+          <select name="legal-entity-current-company-ownership" id="legal-entity-current-company-ownership">
+            <option value="">-- Silahkan Pilih --</option>
+            <option value="Sendiri">Sendiri</option>
+            <option value="Keluarga">Keluarga</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>
+      Data Pasangan
+    </h2>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-full-name">Nama</label>
+        </div>
+        <div class="td">
+          <input type="text" name="partner-full-name" id="partner-full-name">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-place-and-birth-date">Tempat / Tanggal Lahir</label>
+        </div>
+        <div class="td">
+          <input type="text" name="partner-place-and-birth-date" id="partner-place-and-birth-date">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-id-number">Nomor KTP</label>
+        </div>
+        <div class="td">
+          <input type="number" name="partner-id-number" id="partner-id-number">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-mothers-maiden-name">Nama gadis Ibu kandung</label>
+        </div>
+        <div class="td">
+          <input type="text" name="partner-mothers-maiden-name" id="partner-mothers-maiden-name">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-address">Alamat sesuai identitas</label>
+        </div>
+        <div class="td">
+          <input type="text" name="partner-address" id="partner-address">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-residence-neighbourhood">RT</label>
+        </div>
+        <div class="td">
+          <input type="number" name="partner-residence-neighbourhood" id="partner-residence-neighbourhood">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-residence-commune">RW</label>
+        </div>
+        <div class="td">
+          <input type="number" name="partner-residence-commune" id="partner-residence-commune">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-residence-village">Kelurahan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="partner-residence-village" id="partner-residence-village">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-residence-district">Kecamatan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="partner-residence-district" id="partner-residence-district">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-residence-province">Provinsi</label>
+        </div>
+        <div class="td">
+          <select name="partner-residence-province" id="partner-residence-province" data-dependents="[&quot;partner-residence-city&quot;]">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-residence-city">Kabupaten/Kota</label>
+        </div>
+        <div class="td">
+          <select name="partner-residence-city" id="partner-residence-city" data-select-option-mapping="city">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-residence-postal-code">Kode Pos</label>
+        </div>
+        <div class="td">
+          <input type="number" name="partner-residence-postal-code" id="partner-residence-postal-code">
+        </div>
+      </div>
+    </div>
+    <h3 class="section-sub-heading">Data Tempat Tinggal Pasangan</h3>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-address">Alamat tinggal saat ini</label>
+        </div>
+        <div class="td">
+          <input type="text" name="partner-current-address" id="partner-current-address">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-residence-neighbourhood">RT</label>
+        </div>
+        <div class="td">
+          <input type="number" name="partner-current-residence-neighbourhood" id="partner-current-residence-neighbourhood">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-residence-commune">RW</label>
+        </div>
+        <div class="td">
+          <input type="number" name="partner-current-residence-commune" id="partner-current-residence-commune">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-residence-village">Kelurahan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="partner-current-residence-village" id="partner-current-residence-village">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-residence-district">Kecamatan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="partner-current-residence-district" id="partner-current-residence-district">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-residence-province">Provinsi</label>
+        </div>
+        <div class="td">
+          <select name="partner-current-residence-province" id="partner-current-residence-province" data-dependents="[&quot;partner-current-residence-city&quot;]">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-residence-city">Kabupaten/Kota</label>
+        </div>
+        <div class="td">
+          <select name="partner-current-residence-city" id="partner-current-residence-city" data-select-option-mapping="city">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-residence-postal-code">Kode Pos</label>
+        </div>
+        <div class="td">
+          <input type="number" name="partner-current-residence-postal-code" id="partner-current-residence-postal-code">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-home-phone-number">No. Telepon / Handphone</label>
+        </div>
+        <div class="td">
+          <input type="text" name="partner-home-phone-number" id="partner-home-phone-number">
+        </div>
+      </div>
+    </div>
+    <h3 class="section-sub-heading">Data Kantor Pasangan</h3>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-company-name">Nama Usaha / Kantor</label>
+        </div>
+        <div class="td">
+          <input type="text" name="partner-current-company-name" id="partner-current-company-name">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-company-address">Alamat Usaha / Kantor</label>
+        </div>
+        <div class="td">
+          <input type="text" name="partner-current-company-address" id="partner-current-company-address">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-company-phone-number">No. telepon kantor</label>
+        </div>
+        <div class="td">
+          <input type="text" name="partner-current-company-phone-number" id="partner-current-company-phone-number">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-company-phone-number-extension">Extension</label>
+        </div>
+        <div class="td">
+          <input type="text" name="partner-current-company-phone-number-extension" id="partner-current-company-phone-number-extension">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-company-address-province">Provinsi</label>
+        </div>
+        <div class="td">
+          <select name="partner-current-company-address-province" id="partner-current-company-address-province" data-dependents="[&quot;partner-current-company-address-city&quot;]">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-company-address-city">Kabupaten/Kota</label>
+        </div>
+        <div class="td">
+          <select name="partner-current-company-address-city" id="partner-current-company-address-city" data-select-option-mapping="city">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-company-address-postal-code">Kode Pos</label>
+        </div>
+        <div class="td">
+          <input type="number" name="partner-current-company-address-postal-code" id="partner-current-company-address-postal-code">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-company-industry">Bidang Usaha</label>
+        </div>
+        <div class="td">
+          <select name="partner-current-company-industry" id="partner-current-company-industry">
+            <option value="">-- Silahkan Pilih --</option>
+            <option value="Retail">Retail</option>
+            <option value="Perdagangan">Perdagangan</option>
+            <option value="Transportasi">Transportasi</option>
+            <option value="Restoran/Bar/Cafe">Restoran/Bar/Cafe</option>
+            <option value="Kesehatan/Klinik">Kesehatan/Klinik</option>
+            <option value="Keuangan/Bank">Keuangan/Bank</option>
+            <option value="Kontraktor">Kontraktor</option>
+            <option value="Industri/Pabrik">Industri/Pabrik</option>
+            <option value="Pendidikan">Pendidikan</option>
+            <option value="Asuransi/Forex">Asuransi/Forex</option>
+            <option value="Konsultan">Konsultan</option>
+            <option value="Pemerintahan">Pemerintahan</option>
+            <option value="Pertambangan">Pertambangan</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-company-position">Jabatan di Perusahaan</label>
+        </div>
+        <div class="td">
+          <select name="partner-current-company-position" id="partner-current-company-position">
+            <option value="">-- Silahkan Pilih --</option>
+            <option value="Staf">Staf</option>
+            <option value="Supervisor">Supervisor</option>
+            <option value="Manajemen Junior">Manajemen Junior</option>
+            <option value="Manajemen Menengah">Manajemen Menengah</option>
+            <option value="Manajemen Senior">Manajemen Senior</option>
+            <option value="Direktur">Direktur</option>
+            <option value="Pemilik">Pemilik</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-company-working-time-duration">Lama usaha / lama bekerja</label>
+        </div>
+        <div class="td">
+          <input type="text" name="partner-current-company-working-time-duration" id="partner-current-company-working-time-duration">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="partner-current-company-income-per-month">Penghasilan / gaji perbulan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="partner-current-company-income-per-month" id="partner-current-company-income-per-month">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>
+      Data Penjamin
+    </h2>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-full-name">Nama</label>
+        </div>
+        <div class="td">
+          <input type="text" name="guarantor-full-name" id="guarantor-full-name">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-place-and-birth-date">Tempat / Tanggal Lahir</label>
+        </div>
+        <div class="td">
+          <input type="text" name="guarantor-place-and-birth-date" id="guarantor-place-and-birth-date">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-id-number">Nomor KTP</label>
+        </div>
+        <div class="td">
+          <input type="number" name="guarantor-id-number" id="guarantor-id-number">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-mothers-maiden-name">Nama gadis Ibu kandung</label>
+        </div>
+        <div class="td">
+          <input type="text" name="guarantor-mothers-maiden-name" id="guarantor-mothers-maiden-name">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-address">Alamat sesuai identitas</label>
+        </div>
+        <div class="td">
+          <input type="text" name="guarantor-address" id="guarantor-address">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-residence-neighbourhood">RT</label>
+        </div>
+        <div class="td">
+          <input type="number" name="guarantor-residence-neighbourhood" id="guarantor-residence-neighbourhood">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-residence-commune">RW</label>
+        </div>
+        <div class="td">
+          <input type="number" name="guarantor-residence-commune" id="guarantor-residence-commune">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-residence-village">Kelurahan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="guarantor-residence-village" id="guarantor-residence-village">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-residence-district">Kecamatan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="guarantor-residence-district" id="guarantor-residence-district">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-residence-province">Provinsi</label>
+        </div>
+        <div class="td">
+          <select name="guarantor-residence-province" id="guarantor-residence-province" data-dependents="[&quot;guarantor-residence-city&quot;]">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-residence-city">Kabupaten/Kota</label>
+        </div>
+        <div class="td">
+          <select name="guarantor-residence-city" id="guarantor-residence-city" data-select-option-mapping="city">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-residence-postal-code">Kode Pos</label>
+        </div>
+        <div class="td">
+          <input type="number" name="guarantor-residence-postal-code" id="guarantor-residence-postal-code">
+        </div>
+      </div>
+    </div>
+    <h3 class="section-sub-heading">Data Tempat Tinggal Penjamin</h3>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-address">Alamat tinggal saat ini</label>
+        </div>
+        <div class="td">
+          <input type="text" name="guarantor-current-address" id="guarantor-current-address">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-residence-neighbourhood">RT</label>
+        </div>
+        <div class="td">
+          <input type="number" name="guarantor-current-residence-neighbourhood" id="guarantor-current-residence-neighbourhood">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-residence-commune">RW</label>
+        </div>
+        <div class="td">
+          <input type="number" name="guarantor-current-residence-commune" id="guarantor-current-residence-commune">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-residence-village">Kelurahan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="guarantor-current-residence-village" id="guarantor-current-residence-village">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-residence-district">Kecamatan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="guarantor-current-residence-district" id="guarantor-current-residence-district">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-residence-province">Provinsi</label>
+        </div>
+        <div class="td">
+          <select name="guarantor-current-residence-province" id="guarantor-current-residence-province" data-dependents="[&quot;guarantor-current-residence-city&quot;]">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-residence-city">Kabupaten/Kota</label>
+        </div>
+        <div class="td">
+          <select name="guarantor-current-residence-city" id="guarantor-current-residence-city" data-select-option-mapping="city">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-residence-postal-code">Kode Pos</label>
+        </div>
+        <div class="td">
+          <input type="number" name="guarantor-current-residence-postal-code" id="guarantor-current-residence-postal-code">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-home-phone-number">No. Telepon / Handphone</label>
+        </div>
+        <div class="td">
+          <input type="text" name="guarantor-home-phone-number" id="guarantor-home-phone-number">
+        </div>
+      </div>
+    </div>
+    <h3 class="section-sub-heading">Data Kantor Penjamin</h3>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-company-name">Nama Usaha / Kantor</label>
+        </div>
+        <div class="td">
+          <input type="text" name="guarantor-current-company-name" id="guarantor-current-company-name">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-company-address">Alamat Usaha / Kantor</label>
+        </div>
+        <div class="td">
+          <input type="text" name="guarantor-current-company-address" id="guarantor-current-company-address">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-company-phone-number">No. telepon kantor</label>
+        </div>
+        <div class="td">
+          <input type="text" name="guarantor-current-company-phone-number" id="guarantor-current-company-phone-number">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-company-phone-number-extension">Extension</label>
+        </div>
+        <div class="td">
+          <input type="text" name="guarantor-current-company-phone-number-extension" id="guarantor-current-company-phone-number-extension">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-company-address-province">Provinsi</label>
+        </div>
+        <div class="td">
+          <select name="guarantor-current-company-address-province" id="guarantor-current-company-address-province" data-dependents="[&quot;guarantor-current-company-address-city&quot;]">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-company-address-city">Kabupaten/Kota</label>
+        </div>
+        <div class="td">
+          <select name="guarantor-current-company-address-city" id="guarantor-current-company-address-city" data-select-option-mapping="city">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-company-address-postal-code">Kode Pos</label>
+        </div>
+        <div class="td">
+          <input type="number" name="guarantor-current-company-address-postal-code" id="guarantor-current-company-address-postal-code">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-company-industry">Bidang Usaha</label>
+        </div>
+        <div class="td">
+          <select name="guarantor-current-company-industry" id="guarantor-current-company-industry">
+            <option value="">-- Silahkan Pilih --</option>
+            <option value="Retail">Retail</option>
+            <option value="Perdagangan">Perdagangan</option>
+            <option value="Transportasi">Transportasi</option>
+            <option value="Restoran/Bar/Cafe">Restoran/Bar/Cafe</option>
+            <option value="Kesehatan/Klinik">Kesehatan/Klinik</option>
+            <option value="Keuangan/Bank">Keuangan/Bank</option>
+            <option value="Kontraktor">Kontraktor</option>
+            <option value="Industri/Pabrik">Industri/Pabrik</option>
+            <option value="Pendidikan">Pendidikan</option>
+            <option value="Asuransi/Forex">Asuransi/Forex</option>
+            <option value="Konsultan">Konsultan</option>
+            <option value="Pemerintahan">Pemerintahan</option>
+            <option value="Pertambangan">Pertambangan</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-company-position">Jabatan di Perusahaan</label>
+        </div>
+        <div class="td">
+          <select name="guarantor-current-company-position" id="guarantor-current-company-position">
+            <option value="">-- Silahkan Pilih --</option>
+            <option value="Staf">Staf</option>
+            <option value="Supervisor">Supervisor</option>
+            <option value="Manajemen Junior">Manajemen Junior</option>
+            <option value="Manajemen Menengah">Manajemen Menengah</option>
+            <option value="Manajemen Senior">Manajemen Senior</option>
+            <option value="Direktur">Direktur</option>
+            <option value="Pemilik">Pemilik</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-company-working-time-duration">Lama usaha / lama bekerja</label>
+        </div>
+        <div class="td">
+          <input type="text" name="guarantor-current-company-working-time-duration" id="guarantor-current-company-working-time-duration">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="guarantor-current-company-income-per-month">Penghasilan / gaji perbulan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="guarantor-current-company-income-per-month" id="guarantor-current-company-income-per-month">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>
+      Kontak Darurat
+    </h2>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="reference-full-name">Nama</label>
+        </div>
+        <div class="td">
+          <input type="text" name="reference-full-name" id="reference-full-name">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="reference-relationship">Hubungan</label>
+        </div>
+        <div class="td">
+          <select name="reference-relationship" id="reference-relationship">
+            <option value="">-- Silahkan Pilih --</option>
+            <option value="Orang Tua">Orang Tua</option>
+            <option value="Anak">Anak</option>
+            <option value="Saudara Kandung">Saudara Kandung</option>
+            <option value="Sepupu">Sepupu</option>
+            <option value="Om/Tante/Keponakan">Om/Tante/Keponakan</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="reference-address">Alamat tinggal saat ini</label>
+        </div>
+        <div class="td">
+          <input type="text" name="reference-address" id="reference-address">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="reference-residence-neighbourhood">RT</label>
+        </div>
+        <div class="td">
+          <input type="number" name="reference-residence-neighbourhood" id="reference-residence-neighbourhood">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="reference-residence-commune">RW</label>
+        </div>
+        <div class="td">
+          <input type="number" name="reference-residence-commune" id="reference-residence-commune">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="reference-residence-village">Kelurahan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="reference-residence-village" id="reference-residence-village">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="reference-residence-district">Kecamatan</label>
+        </div>
+        <div class="td">
+          <input type="text" name="reference-residence-district" id="reference-residence-district">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="reference-residence-province">Provinsi</label>
+        </div>
+        <div class="td">
+          <select name="reference-residence-province" id="reference-residence-province" data-dependents="[&quot;reference-residence-city&quot;]">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="reference-residence-city">Kabupaten/Kota</label>
+        </div>
+        <div class="td">
+          <select name="reference-residence-city" id="reference-residence-city" data-select-option-mapping="city">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="reference-residence-postal-code">Kode Pos</label>
+        </div>
+        <div class="td">
+          <input type="number" name="reference-residence-postal-code" id="reference-residence-postal-code">
+        </div>
+      </div>
+    </div>
+    <div class="section-content table responsive">
+      <div class="tr">
+        <div class="td">
+          <label for="reference-phone-number">No. Telepon / Handphone</label>
+        </div>
+        <div class="td">
+          <input type="text" name="reference-phone-number" id="reference-phone-number">
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
