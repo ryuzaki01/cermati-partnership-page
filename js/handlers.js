@@ -5,7 +5,6 @@ module.exports = {
     var $tabs = $('.tabs');
     $tabs.responsiveTabs({
       rotate: false,
-      startCollapsed: 'accordion',
       collapsible: 'accordion',
       setHash: true
     });

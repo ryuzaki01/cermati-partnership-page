@@ -14,6 +14,7 @@ var cityMappings = require('./data/cityMappings');
 var $body = $('body');
 var $applyForm = $('#apply-form');
 var $completeForm = $('#complete-form-wrapper');
+var $errorBox = $('#error-box');
 
 module.exports = {
   isMobile: window.innerWidth <= 480,
@@ -42,5 +43,15 @@ module.exports = {
 
   toggleCompleteForm: function () {
     $completeForm.toggleClass('hidden');
+  },
+
+  showError: function (msg) {
+    $errorBox.find('p').html(msg);
+    $errorBox.removeClass('hidden');
+  },
+
+  hideError: function () {
+    $errorBox.find('p').html('');
+    $errorBox.addClass('hidden');
   }
 };

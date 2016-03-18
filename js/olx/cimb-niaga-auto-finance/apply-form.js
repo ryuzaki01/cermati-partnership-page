@@ -32,14 +32,16 @@ exports.ready = function () {
     var status = _.get('responseJSON.status', response);
 
     if (status === false) {
-      $form.find('.has-error').removeClass('has-error');
-
-      _.each(function (value, key) {
-        var selector = inputSelector(key);
-        $form.find(selector).parent().addClass('has-error');
-      }, errorMessages);
+      if (!errorMessages.error) {
+        _.each(function (value, key) {
+          var selector = inputSelector(key);
+          $form.find(selector).parent().addClass('has-error');
+        }, errorMessages);
+      } else {
+        App.showError(errorMessages.error);
+      }
     } else {
-      // Server error
+      App.showError("Tidak dapat terhubung dengan server cermati.");
     }
   };
 
@@ -57,6 +59,12 @@ exports.ready = function () {
 
   $form.on('submit', function (event) {
     event.preventDefault();
+
+    // Hide Error Box
+    App.hideError();
+
+    // Reset Error Input
+    $form.find('.has-error').removeClass('has-error');
 
     var postData = formData({
       name: inputValue($form, 'name'),

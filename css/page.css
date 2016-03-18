@@ -980,6 +980,18 @@ select {
   white-space: nowrap;
   color: #f00;
 }
+.notification.error {
+  color: #5f3f3f;
+  border-color: #f1a899;
+  background: #fddfdf;
+}
+.notification.error p {
+  color: #c77169;
+  margin: 0;
+}
+.notification.error span {
+  color: red;
+}
 .notification table {
   display: block;
 }
