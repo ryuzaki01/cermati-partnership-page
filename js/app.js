@@ -19,6 +19,9 @@ module.exports = {
   provinces: provinces,
   cities: cities,
   cityMappings: cityMappings,
+  url: function (url) {
+    return process.env.BASE_URL + url;
+  },
   init: function () {
     // Initialize App
     $(document).ready(function () {
