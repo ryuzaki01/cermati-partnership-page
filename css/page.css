@@ -8,6 +8,18 @@
   content: '';
   clear: both;
 }
+.hidden {
+  display: none;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
 .cermati-col-xs-1, .cermati-col-sm-1, .cermati-col-md-1, .cermati-col-lg-1, .cermati-col-xs-2, .cermati-col-sm-2, .cermati-col-md-2, .cermati-col-lg-2, .cermati-col-xs-3, .cermati-col-sm-3, .cermati-col-md-3, .cermati-col-lg-3, .cermati-col-xs-4, .cermati-col-sm-4, .cermati-col-md-4, .cermati-col-lg-4, .cermati-col-xs-5, .cermati-col-sm-5, .cermati-col-md-5, .cermati-col-lg-5, .cermati-col-xs-6, .cermati-col-sm-6, .cermati-col-md-6, .cermati-col-lg-6, .cermati-col-xs-7, .cermati-col-sm-7, .cermati-col-md-7, .cermati-col-lg-7, .cermati-col-xs-8, .cermati-col-sm-8, .cermati-col-md-8, .cermati-col-lg-8, .cermati-col-xs-9, .cermati-col-sm-9, .cermati-col-md-9, .cermati-col-lg-9, .cermati-col-xs-10, .cermati-col-sm-10, .cermati-col-md-10, .cermati-col-lg-10, .cermati-col-xs-11, .cermati-col-sm-11, .cermati-col-md-11, .cermati-col-lg-11, .cermati-col-xs-12, .cermati-col-sm-12, .cermati-col-md-12, .cermati-col-lg-12 {
   position: relative;
   min-height: 1px;
@@ -330,6 +342,9 @@
   .hidden-sm {
     display: none;
   }
+  .sm-text-center {
+    text-align: center;
+  }
 }
 @media (min-width: 992px) {
   .cermati-col-md-1, .cermati-col-md-2, .cermati-col-md-3, .cermati-col-md-4, .cermati-col-md-5, .cermati-col-md-6, .cermati-col-md-7, .cermati-col-md-8, .cermati-col-md-9, .cermati-col-md-10, .cermati-col-md-11, .cermati-col-md-12 {
@@ -495,6 +510,21 @@
 @media (max-width: 767px) {
   .hidden-xs {
     display: none;
+  }
+  .xs-text-center {
+    text-align: center;
+  }
+  .xs-text-left {
+    text-align: left;
+  }
+  .xs-text-right {
+    text-align: right;
+  }
+  .xs-margin-bottom-10 {
+    margin-bottom: 20px;
+  }
+  .xs-margin-bottom-20 {
+    margin-bottom: 20px;
   }
 }
 @media (min-width: 1200px) {
@@ -839,6 +869,10 @@ select {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  max-width: 100%;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .btn.grey {
   background-color: #AAAAAA;
@@ -942,6 +976,7 @@ select {
 .notification.alert em {
   font-style: normal;
   font-weight: bold;
+  white-space: nowrap;
   color: #f00;
 }
 .notification table {
@@ -956,6 +991,14 @@ select {
 .notification table > tbody > tr > td {
   display: block;
   width: 100%;
+}
+.validation-error {
+  display: none;
+  color: red;
+  font-size: .8em;
+}
+.has-error .validation-error {
+  display: block;
 }
 .info-container h2 {
   font-size: 2em;
@@ -1019,13 +1062,4 @@ footer address a {
 }
 *.no-padding {
   padding: 0;
-}
-.text-left {
-  text-align: left !important;
-}
-.text-right {
-  text-align: right !important;
-}
-.text-center {
-  text-align: center !important;
 }

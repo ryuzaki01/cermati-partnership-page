@@ -28,5 +28,9 @@ module.exports = {
       applyForm.ready();
       completeForm.ready();
     });
+  },
+
+  showLongForm: function () {
+
   }
 };

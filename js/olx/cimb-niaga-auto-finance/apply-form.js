@@ -67,7 +67,7 @@ exports.ready = function () {
     });
 
     $.ajax({
-      url: 'http://localhost:3000/api/sales-lead/save',
+      url: process.env.BASE_URL + '/api/sales-lead/save',
       context: 'application/json',
       method: 'POST',
       data: postData,
