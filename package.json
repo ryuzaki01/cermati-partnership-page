@@ -3,14 +3,15 @@
   "version": "0.0.10",
   "private": true,
   "dependencies": {
-    "dotenv": "~1.0",
     "async": "1.5.2",
+    "dotenv": "~1.0",
     "image-size": "~0.4.0",
     "imagemin-jpeg-recompress": "~4.3.0",
     "immutable": "~3.7.6",
     "jquery": "~2.2.0",
     "lodash": "~4.0.0",
     "mkdirp": "~0.5.0",
+    "sprintf-js": "^1.0.3",
     "webpack": "~1.12.10"
   },
   "devDependencies": {
