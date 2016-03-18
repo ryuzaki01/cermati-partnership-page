@@ -4,7 +4,7 @@ var _ = require('lodash/fp');
 var sprintf = require('sprintf-js').sprintf;
 var $ = require('jquery');
 
-var inputSelector = sprintf.bind(sprintf, 'input[name=%s]');
+var inputSelector = sprintf.bind(sprintf, '[name=%s]');
 var inputValue = function ($form, name) {
   var selector = inputSelector(name);
   return $form.find(selector).val();
@@ -26,18 +26,6 @@ exports.ready = function () {
   var $form = $('#apply-form');
   var $discountBox = $('#discount-box');
   var $thankyouBox = $('#thankyou-box');
-
-  var productOptionNames = [
-    'loanAmount',
-    'downPayment',
-    'tenure'
-  ];
-  var productOptions = _.flowRight(
-    defaultProductOptions.concat.bind(defaultProductOptions),
-    _.map(function (key) {
-      return {key: key, value: inputValue($form, key)};
-    })
-  );
 
   var onError = function (response) {
     var errorMessages = _.get('responseJSON.data', response);
@@ -75,7 +63,12 @@ exports.ready = function () {
       email: inputValue($form, 'email'),
       city: inputValue($form, 'city'),
       phoneNumber: inputValue($form, 'phoneNumber'),
-      productOptions: productOptions(productOptionNames)
+      productOptions: {
+        loanAmount: inputValue($form, 'loanAmount'),
+        downPayment: inputValue($form, 'downPayment'),
+        tenure: inputValue($form, 'tenure'),
+        tenureUnit: inputValue($form, 'tenureUnit')
+      }
     });
 
     $.ajax({
