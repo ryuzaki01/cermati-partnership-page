@@ -42,13 +42,13 @@ exports.ready = function () {
     var status = _.get('responseJSON.status', response);
 
     if (status === false) {
-      $form.find('.validation-error').addClass('hidden');
+      $form.find('.has-error').removeClass('has-error');
 
       _.each(function (value, key) {
         var selector = inputSelector({
           name: key
         });
-        $form.find(selector).parent().find('.validation-error').removeClass('hidden');
+        $form.find(selector).parent().addClass('has-error');
       }, errorMessages);
     } else {
       // Server error
