@@ -5,25 +5,41 @@ var _ = require('lodash/fp');
 
 var defaultOption = $.bind($, '<option value="">-- Silahkan Pilih --</option>');
 
+/**
+ * A function that creates a `<option>` jquery element with
+ * the given label and value.
+ *
+ * @param label - Option label.
+ * @param value - Option value.
+ * @returns {JQuery<Element>}
+ */
 var option = function (label, value) {
   return $('<option></option>')
     .text(label)
     .attr('value', value);
 };
 
-exports.ready = function () {
-  var provinces = function () {
-    return App.provinces.map(function (province) {
-      return option(province, province);
-    });
-  };
+/**
+ * A function that returns a list of province options.
+ * @returns {Array}
+ */
+var provinces = function () {
+  return App.provinces.map(function (province) {
+    return option(province, province);
+  });
+};
 
-  var cities = function (province) {
-    return App.cityMappings[province].map(function (city) {
-      return option(city, city);
-    });
-  };
+/**
+ * A function that returns a list of city options.
+ * @returns {Array}
+ */
+var cities = function (province) {
+  return App.cityMappings[province].map(function (city) {
+    return option(city, city);
+  });
+};
 
+var prepareSelectOptions = function () {
   $('select[data-dependents]').each(function () {
     var $select = $(this);
     var dependents = $select.data('dependents').map(function (selector) {
@@ -44,4 +60,8 @@ exports.ready = function () {
       });
     });
   });
+};
+
+exports.ready = function () {
+  prepareSelectOptions();
 };
