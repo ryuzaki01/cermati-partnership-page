@@ -49,7 +49,7 @@
           <label for="applicant-place-of-birth-province">Provinsi Tempat Lahir</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="applicant-place-of-birth-province" id="applicant-place-of-birth-province" data-dependents="[&quot;applicant-place-of-birth-city&quot;]">
+          <select name="applicant-place-of-birth-province" id="applicant-place-of-birth-province" data-dependents="[&quot;applicant-place-of-birth-city&quot;,&quot;partner-place-of-birth-city&quot;,&quot;guarantor-place-of-birth-city&quot;]">
             <option value="">-- Silahkan Pilih --</option>
 
           </select>
@@ -71,7 +71,7 @@
           <label for="applicant-date-of-birth">Tanggal Lahir</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="date" name="applicant-date-of-birth" id="applicant-date-of-birth">
+          <input type="text" name="applicant-date-of-birth" class="date-picker" id="applicant-date-of-birth" data-accuracy="">
         </div>
       </div>
       <div class="cermati-row margin-bottom-10">
@@ -610,7 +610,7 @@
           <label for="legal-entity-current-company-year-founded">Tahun Perusahaan Berdiri</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="date" name="legal-entity-current-company-year-founded" id="legal-entity-current-company-year-founded">
+          <input type="text" name="legal-entity-current-company-year-founded" class="date-picker" id="legal-entity-current-company-year-founded" data-accuracy="year">
         </div>
       </div>
       <div class="cermati-row margin-bottom-10">
@@ -650,10 +650,32 @@
       </div>
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="partner-place-and-birth-date">Tempat/Tanggal Lahir</label>
+          <label for="partner-place-of-birth-province">Provinsi Tempat Lahir</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="partner-place-and-birth-date" id="partner-place-and-birth-date">
+          <select name="partner-place-of-birth-province" id="partner-place-of-birth-province">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
+          <label for="partner-place-of-birth-city">Kota Tempat Lahir</label>
+        </div>
+        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <select name="partner-place-of-birth-city" id="partner-place-of-birth-city" data-select-option-mapping="city">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
+          <label for="partner-date-of-birth">Tanggal Lahir</label>
+        </div>
+        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <input type="text" name="partner-date-of-birth" class="date-picker" id="partner-date-of-birth" data-accuracy="">
         </div>
       </div>
       <div class="cermati-row margin-bottom-10">
@@ -958,10 +980,32 @@
       </div>
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="guarantor-place-and-birth-date">Tempat/Tanggal Lahir</label>
+          <label for="guarantor-place-of-birth-province">Provinsi Tempat Lahir</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="guarantor-place-and-birth-date" id="guarantor-place-and-birth-date">
+          <select name="guarantor-place-of-birth-province" id="guarantor-place-of-birth-province">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
+          <label for="guarantor-place-of-birth-city">Kota Tempat Lahir</label>
+        </div>
+        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <select name="guarantor-place-of-birth-city" id="guarantor-place-of-birth-city" data-select-option-mapping="city">
+            <option value="">-- Silahkan Pilih --</option>
+
+          </select>
+        </div>
+      </div>
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
+          <label for="guarantor-date-of-birth">Tanggal Lahir</label>
+        </div>
+        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <input type="text" name="guarantor-date-of-birth" class="date-picker" id="guarantor-date-of-birth" data-accuracy="">
         </div>
       </div>
       <div class="cermati-row margin-bottom-10">
