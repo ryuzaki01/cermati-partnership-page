@@ -10,6 +10,24 @@ var _ = require('lodash/fp');
  */
 exports.extractFormData = function ($form) {
   return _.reduce(function (acc, input) {
-    return _.set(input.name, input.value, acc);
+    var $input = $form.find('#' + input.name);
+    var customInput = $input.data('custom-input');
+    var value = input.value;
+    var setValue = _.set(input.name, _, acc);
+
+    if ($input.hasClass('has-custom-input') && customInput === value) {
+      var $customInputText = $input.parent().find('.custom-input-text');
+      var customInputValue = $customInputText.val();
+      console.log(customInputValue);
+
+      // If the value is empty then set empty string.
+      if (_.isEmpty(customInputValue)) {
+        return setValue('');
+      }
+
+      return setValue(value + ':' + customInputValue);
+    }
+
+    return setValue(value);
   }, {}, $form.serializeArray());
 };
