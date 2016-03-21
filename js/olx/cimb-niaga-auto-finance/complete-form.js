@@ -81,6 +81,24 @@ var prepareSelectOptions = function () {
   });
 };
 
+var prepareSelectFieldWithCustomInput = function () {
+  $('select.has-custom-input').each(function () {
+    var $select = $(this);
+    var $customInputText = $select.parent().find('.custom-input-text').hide();
+    var customInputValue = $select.data('custom-input');
+
+    $select.on('change', function () {
+      if ($select.val() !== customInputValue) {
+        $customInputText.val('');
+        $customInputText.hide();
+        return;
+      }
+
+      $customInputText.show();
+    });
+  });
+};
+
 var prepareDateInputFields = function () {
   $('.date-picker').each(function () {
     var $dateInput = $(this);
@@ -225,5 +243,6 @@ var prepareSubmissionHandler = function () {
 exports.ready = function () {
   prepareSelectOptions();
   prepareDateInputFields();
+  prepareSelectFieldWithCustomInput()
   prepareSubmissionHandler();
 };
