@@ -4,6 +4,7 @@ var $ = require('jquery');
 var _ = require('lodash/fp');
 var sprintf = require('sprintf-js').sprintf;
 var formUtil = require('../../utils/form');
+var scrollUtil = require('../../utils/scroll');
 
 var defaultOption = $.bind($, '<option value="">-- Silahkan Pilih --</option>');
 
@@ -108,7 +109,7 @@ var prepareSubmissionHandler = function () {
         })
         .value();
 
-
+      scrollUtil.scrollToElement($form.find('.has-error').eq(0));
     }
   };
 
