@@ -41,7 +41,7 @@ exports.ready = function () {
         App.showError(errorMessages.error);
       }
     } else {
-      App.showError("Tidak dapat terhubung dengan server cermati.");
+      App.showError('Tidak dapat terhubung dengan server cermati.');
     }
   };
 

@@ -107,10 +107,13 @@ var prepareSubmissionHandler = function () {
             .append(validationError(messages));
         })
         .value();
+
+
     }
   };
-  var onError = function () {
 
+  var onError = function () {
+    App.showError('Tidak dapat terhubung dengan server cermati.');
   };
 
   var submissionHandler = function (event) {
