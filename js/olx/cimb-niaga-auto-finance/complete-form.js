@@ -80,6 +80,19 @@ var prepareSelectOptions = function () {
   });
 };
 
+var prepareDateInputFields = function () {
+  $('.date-picker').each(function () {
+    var $dateInput = $(this);
+    var accuracy = $dateInput.data('accuracy');
+
+    if (!_.isEmpty(accuracy) && accuracy !== 'date') {
+
+    } else {
+      $dateInput.datepicker();
+    }
+  });
+};
+
 var prepareSubmissionHandler = function () {
   // TODO: remove below code
   App.data = {
@@ -139,5 +152,6 @@ var prepareSubmissionHandler = function () {
 
 exports.ready = function () {
   prepareSelectOptions();
+  prepareDateInputFields();
   prepareSubmissionHandler();
 };
