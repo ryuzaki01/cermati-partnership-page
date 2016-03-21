@@ -49,9 +49,8 @@
           <label for="applicant-place-of-birth-province">Provinsi Tempat Lahir</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="applicant-place-of-birth-province" id="applicant-place-of-birth-province" data-dependents="[&quot;applicant-place-of-birth-city&quot;,&quot;partner-place-of-birth-city&quot;,&quot;guarantor-place-of-birth-city&quot;]">
+          <select name="applicant-place-of-birth-province" id="applicant-place-of-birth-province" data-dependents="[&quot;applicant-place-of-birth-city&quot;]">
             <option value="">-- Silahkan Pilih --</option>
-
           </select>
         </div>
       </div>
@@ -103,7 +102,7 @@
             <option value="S3">S3</option>
             <option value="Lainnya (harap diisi dengan informasi terkait)">Lainnya (harap diisi dengan informasi terkait)</option>
           </select>
-          <input type="text" name="Lainnya (harap diisi dengan informasi terkait)" class="custom-input-text">
+          <input type="text" name="applicant-last-education-level-custom" class="custom-input-text">
         </div>
       </div>
       <div class="cermati-row margin-bottom-10">
@@ -671,9 +670,9 @@
           <label for="partner-place-of-birth-province">Provinsi Tempat Lahir</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="partner-place-of-birth-province" id="partner-place-of-birth-province">
+          <select name="partner-place-of-birth-province" id="partner-place-of-birth-province"
+                  data-dependents="[&quot;partner-place-of-birth-city&quot;]">
             <option value="">-- Silahkan Pilih --</option>
-
           </select>
         </div>
       </div>
@@ -684,7 +683,6 @@
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
           <select name="partner-place-of-birth-city" id="partner-place-of-birth-city" data-select-option-mapping="city">
             <option value="">-- Silahkan Pilih --</option>
-
           </select>
         </div>
       </div>
@@ -1003,9 +1001,9 @@
           <label for="guarantor-place-of-birth-province">Provinsi Tempat Lahir</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="guarantor-place-of-birth-province" id="guarantor-place-of-birth-province">
+          <select name="guarantor-place-of-birth-province" id="guarantor-place-of-birth-province"
+                  data-dependents="[&quot;guarantor-place-of-birth-city&quot;]">
             <option value="">-- Silahkan Pilih --</option>
-
           </select>
         </div>
       </div>
@@ -1016,7 +1014,6 @@
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
           <select name="guarantor-place-of-birth-city" id="guarantor-place-of-birth-city" data-select-option-mapping="city">
             <option value="">-- Silahkan Pilih --</option>
-
           </select>
         </div>
       </div>
