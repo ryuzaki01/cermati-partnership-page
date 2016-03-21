@@ -92,7 +92,8 @@
           <label for="applicant-last-education-level">Pendidikan</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="applicant-last-education-level" id="applicant-last-education-level">
+          <select name="applicant-last-education-level" id="applicant-last-education-level"
+                  class="has-custom-input" data-custom-input="Lainnya (harap diisi dengan informasi terkait)">
             <option value="">-- Silahkan Pilih --</option>
             <option value="SD/SMP">SD/SMP</option>
             <option value="SMA">SMA</option>
@@ -100,8 +101,9 @@
             <option value="S1">S1</option>
             <option value="S2">S2</option>
             <option value="S3">S3</option>
-
+            <option value="Lainnya (harap diisi dengan informasi terkait)">Lainnya (harap diisi dengan informasi terkait)</option>
           </select>
+          <input type="text" name="Lainnya (harap diisi dengan informasi terkait)" class="custom-input-text">
         </div>
       </div>
       <div class="cermati-row margin-bottom-10">
@@ -316,10 +318,18 @@
       </div>
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="applicant-residence-time-duration">Lama Tinggal</label>
+          <label for="applicant-residence-time-duration-year">Lama Tinggal (Tahun)</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="applicant-residence-time-duration" id="applicant-residence-time-duration">
+          <input type="number" name="applicant-residence-time-duration-year" id="applicant-residence-time-duration-year">
+        </div>
+      </div>
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
+          <label for="applicant-residence-time-duration-month">Lama Tinggal (Bulan)</label>
+        </div>
+        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <input type="text" name="applicant-residence-time-duration-month" id="applicant-residence-time-duration-month">
         </div>
       </div>
       <div class="cermati-row margin-bottom-10">
@@ -341,7 +351,8 @@
           <label for="type-of-jobs">Jenis Pekerjaan</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="type-of-jobs" id="type-of-jobs">
+          <select name="type-of-jobs" id="type-of-jobs" class="has-custom-input"
+                  data-custom-input="Lainnya (harap diisi dengan informasi terkait)">
             <option value="">-- Silahkan Pilih --</option>
             <option value="PNS">PNS</option>
             <option value="Swasta">Swasta</option>
@@ -351,8 +362,9 @@
             <option value="Wiraswasta">Wiraswasta</option>
             <option value="Pelajar">Pelajar</option>
             <option value="Tidak Bekerja">Tidak Bekerja</option>
-
+            <option value="Lainnya (harap diisi dengan informasi terkait)">Lainnya (harap diisi dengan informasi terkait)</option>
           </select>
+          <input type="text" name="type-of-jobs-custom" class="custom-input-text">
         </div>
       </div>
       <div class="cermati-row margin-bottom-10">
@@ -422,7 +434,8 @@
           <label for="current-company-industry">Bidang Usaha</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="current-company-industry" id="current-company-industry">
+          <select name="current-company-industry" id="current-company-industry"
+                  class="has-custom-input" data-custom-input="Lainnya (harap diisi dengan informasi terkait)">
             <option value="">-- Silahkan Pilih --</option>
             <option value="Retail">Retail</option>
             <option value="Perdagangan">Perdagangan</option>
@@ -437,8 +450,9 @@
             <option value="Konsultan">Konsultan</option>
             <option value="Pemerintahan">Pemerintahan</option>
             <option value="Pertambangan">Pertambangan</option>
-
+            <option value="Lainnya (harap diisi dengan informasi terkait)">Lainnya (harap diisi dengan informasi terkait)</option>
           </select>
+          <input type="text" name="current-company-industry-custom" class="custom-input-text">
         </div>
       </div>
       <div class="cermati-row margin-bottom-10">
@@ -578,7 +592,8 @@
           <label for="legal-entity-current-company-industry">Bidang Usaha</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="legal-entity-current-company-industry" id="legal-entity-current-company-industry">
+          <select name="legal-entity-current-company-industry" id="legal-entity-current-company-industry"
+                  class="has-custom-input" data-custom-input="Lainnya (harap diisi dengan informasi terkait)">
             <option value="">-- Silahkan Pilih --</option>
             <option value="Retail">Retail</option>
             <option value="Perdagangan">Perdagangan</option>
@@ -593,8 +608,9 @@
             <option value="Konsultan">Konsultan</option>
             <option value="Pemerintahan">Pemerintahan</option>
             <option value="Pertambangan">Pertambangan</option>
-
+            <option value="Lainnya (harap diisi dengan informasi terkait)">Lainnya (harap diisi dengan informasi terkait)</option>
           </select>
+          <input type="text" name="legal-entity-current-company-industry-custom" class="custom-input-text">
         </div>
       </div>
       <div class="cermati-row margin-bottom-10">
@@ -626,12 +642,14 @@
           <label for="legal-entity-current-company-ownership">Status Tempat Usaha</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="legal-entity-current-company-ownership" id="legal-entity-current-company-ownership">
+          <select name="legal-entity-current-company-ownership" id="legal-entity-current-company-ownership"
+                  class="has-custom-input" data-custom-input="Kontrak (Harap isi sisa kontrak)">
             <option value="">-- Silahkan Pilih --</option>
             <option value="Sendiri">Sendiri</option>
             <option value="Keluarga">Keluarga</option>
-
+            <option value="Kontrak (Harap isi sisa kontrak)">Kontrak (Harap isi sisa kontrak)</option>
           </select>
+          <input type="text" name="legal-entity-current-company-ownership-custom" class="custom-input-text">
         </div>
       </div>
     </section>
@@ -911,7 +929,8 @@
           <label for="partner-current-company-industry">Bidang Usaha</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="partner-current-company-industry" id="partner-current-company-industry">
+          <select name="partner-current-company-industry" id="partner-current-company-industry"
+                  class="has-custom-input" data-custom-input="Lainnya (harap diisi dengan informasi terkait)">
             <option value="">-- Silahkan Pilih --</option>
             <option value="Retail">Retail</option>
             <option value="Perdagangan">Perdagangan</option>
@@ -926,8 +945,9 @@
             <option value="Konsultan">Konsultan</option>
             <option value="Pemerintahan">Pemerintahan</option>
             <option value="Pertambangan">Pertambangan</option>
-
+            <option value="Lainnya (harap diisi dengan informasi terkait)">Lainnya (harap diisi dengan informasi terkait)</option>
           </select>
+          <input type="text" name="partner-current-company-industry-custom" class="custom-input-text">
         </div>
       </div>
       <div class="cermati-row margin-bottom-10">
@@ -1241,7 +1261,8 @@
           <label for="guarantor-current-company-industry">Bidang Usaha</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="guarantor-current-company-industry" id="guarantor-current-company-industry">
+          <select name="guarantor-current-company-industry" id="guarantor-current-company-industry"
+                  class="has-custom-input" data-custom-input="Lainnya (harap diisi dengan informasi terkait)">
             <option value="">-- Silahkan Pilih --</option>
             <option value="Retail">Retail</option>
             <option value="Perdagangan">Perdagangan</option>
@@ -1256,8 +1277,9 @@
             <option value="Konsultan">Konsultan</option>
             <option value="Pemerintahan">Pemerintahan</option>
             <option value="Pertambangan">Pertambangan</option>
-
+            <option value="Lainnya (harap diisi dengan informasi terkait)">Lainnya (harap diisi dengan informasi terkait)</option>
           </select>
+          <input type="text" name="guarantor-current-company-industry-custom" class="custom-input-text">
         </div>
       </div>
       <div class="cermati-row margin-bottom-10">
