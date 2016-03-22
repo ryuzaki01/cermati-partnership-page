@@ -232,23 +232,25 @@ var prepareSubmissionHandler = function () {
       App.data.orderId,
       $.param({token: App.data.signInToken})
     ));
+    var $inputContainersWithErrors = $form.find('.has-error');
+    var ajaxOptions = {
+      url: fillFormAPI,
+      method: 'POST',
+      data: formUtil.extractFormData($form),
+    };
 
     // Show Loading
     $formLoading.show();
     $submitBtn.hide();
 
     // Hide error messages
-    var $inputContainersWithErrors = $form.find('.has-error');
     $inputContainersWithErrors.find('.validation-error').remove();
     $inputContainersWithErrors.removeClass('has-error');
 
-    $.ajax({
-      url: fillFormAPI,
-      method: 'POST',
-      data: formUtil.extractFormData($form),
-      success: onSuccess,
-      error: onError
-    });
+    $.ajax(ajaxOptions)
+      .done(onSuccess)
+      .fail(onError)
+      .always(onComplete);
   };
 
   $form.on('submit', submissionHandler);
