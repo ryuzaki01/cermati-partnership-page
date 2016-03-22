@@ -830,6 +830,7 @@ select {
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
+  padding-right: 30px;
 }
 .form-group {
   padding-bottom: 12px;
@@ -1118,7 +1119,7 @@ footer address a {
   .calculator-form form table td:first-of-type {
     width: 130px;
   }
-  .calculator-form form input,
+  .calculator-form form input:not([type=submit]),
   .calculator-form form select {
     width: 100%;
   }
