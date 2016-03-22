@@ -194,7 +194,6 @@ var prepareSubmissionHandler = function () {
   // };
 
   var $form = $('#complete-form');
-  App.toggleCompleteForm();
 
   var onSuccess = function (response) {
     if (response.success === false) {
