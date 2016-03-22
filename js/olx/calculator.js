@@ -32,9 +32,7 @@ module.exports = {
     };
 
     var onComplete = function() {
-      setTimeout(function () {
-        $simulationLoading.hide();
-      }, 500);
+      $simulationLoading.hide();
     };
 
     $form.on('submit', function (event) {
