@@ -27,7 +27,7 @@ var paths = {
   },
   less: ['./css/*.less'],
   vendorCss: [
-    './js/jquery-ui/jquery-ui.min.css',
+    './js/jquery-ui/jquery-ui.css',
     './js/jquery-ui/jquery.responsiveTabs.css'
   ],
 

@@ -1,6 +1,18 @@
 'use strict';
 
 module.exports = {
+  handleQueryString: function ($form) {
+    var query = document.location.search.replace('?', '');
+    query = query.split('&');
+    if (query.length > 1) {
+      query.forEach(function (q) {
+        var keyVal = q.split('=');
+        $form.find('[name=' + keyVal[0] + ']').val(keyVal[1]);
+      });
+    }
+    window.history.replaceState(null, document.title, './');
+  },
+
   handleTabs: function () {
     var $tabs = $('.tabs');
     $tabs.responsiveTabs({

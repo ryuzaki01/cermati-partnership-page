@@ -184,6 +184,9 @@ var prepareDateInputFields = function () {
 };
 
 var prepareSubmissionHandler = function () {
+  var $formLoading = $('#completeform-loading');
+  var $submitBtn = $('#completeform-submit');
+
   // TODO: remove below code
   App.data = {
     signInToken: 'f37b8c07a72f8eca093d95dcf364f16463b0feb370a08165005ac7adc6f7a7946891f16be1ba58ba27f2ca4c5898d7a93fb8c74830f836ad9f0f2883e9bac6f87f2afef641dad5d45f181568d482e4b75af3091e50684b40ce83962f7cc10cdf',
@@ -220,8 +223,19 @@ var prepareSubmissionHandler = function () {
     App.showError('Tidak dapat terhubung dengan server cermati.');
   };
 
+  var onComplete = function () {
+    setTimeout(function () {
+      $formLoading.hide();
+      $submitBtn.show();
+    }, 500);
+  };
+
   var submissionHandler = function (event) {
     event.preventDefault();
+
+    // Show Loading
+    $formLoading.show();
+    $submitBtn.hide();
 
     // Hide error messages
     var $inputContainersWithErrors = $form.find('.has-error');

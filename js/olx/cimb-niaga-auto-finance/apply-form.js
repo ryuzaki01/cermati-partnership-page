@@ -26,6 +26,8 @@ exports.ready = function () {
   var $form = $('#apply-form');
   var $discountBox = $('#discount-box');
   var $thankyouBox = $('#thankyou-box');
+  var $formLoading = $('#form-loading');
+  var $submitBtn = $('#form-submit');
 
   var onError = function (response) {
     var errorMessages = _.get('responseJSON.data', response);
@@ -57,11 +59,22 @@ exports.ready = function () {
     }
   };
 
+  var onComplete = function () {
+    setTimeout(function () {
+      $formLoading.hide();
+      $submitBtn.show();
+    }, 500);
+  };
+
   $form.on('submit', function (event) {
     event.preventDefault();
 
     // Hide Error Box
     App.hideError();
+
+    // Show Loading
+    $formLoading.show();
+    $submitBtn.hide();
 
     // Reset Error Input
     $form.find('.has-error').removeClass('has-error');
@@ -87,7 +100,7 @@ exports.ready = function () {
       beforeSend: _.noop,
       success: onSuccess,
       error: onError,
-      complete: _.noop
+      complete: onComplete
     });
   });
 };
