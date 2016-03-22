@@ -1,4 +1,4 @@
-<form id="complete-form" class="cermati-row hidden">
+<form id="complete-form" class="cermati-row form-content">
   <div class="cermati-col-lg-offset-2 cermati-col-md-offset-1 cermati-col-lg-8 cermati-col-md-10 cermati-col-sm-12">
     <section>
       <h2>
@@ -157,68 +157,112 @@
           <input type="text" name="applicant-address" id="applicant-address">
         </div>
       </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="applicant-residence-neighbourhood">RT</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="applicant-residence-neighbourhood" id="applicant-residence-neighbourhood">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="applicant-residence-commune">RW</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="applicant-residence-commune" id="applicant-residence-commune">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="applicant-residence-village">Kelurahan</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="applicant-residence-village" id="applicant-residence-village">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="applicant-residence-district">Kecamatan</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="applicant-residence-district" id="applicant-residence-district">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="applicant-residence-province">Provinsi</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="applicant-residence-province" id="applicant-residence-province" data-dependents="[&quot;applicant-residence-city&quot;]">
-            <option value="">-- Silahkan Pilih --</option>
 
-          </select>
-        </div>
-      </div>
       <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="applicant-residence-city">Kabupaten/Kota</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="applicant-residence-city" id="applicant-residence-city" data-select-option-mapping="city">
-            <option value="">-- Silahkan Pilih --</option>
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="applicant-residence-neighbourhood">RT</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="applicant-residence-neighbourhood" id="applicant-residence-neighbourhood">
+                </div>
+              </div>
+            </div>
 
-          </select>
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="applicant-residence-commune">RW</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="applicant-residence-commune" id="applicant-residence-commune">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="applicant-residence-postal-code">Kode Pos</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="applicant-residence-postal-code" id="applicant-residence-postal-code">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="applicant-residence-village">Kelurahan</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="text" name="applicant-residence-village" id="applicant-residence-village">
+                </div>
+              </div>
+            </div>
+
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="applicant-residence-district">Kecamatan</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="text" name="applicant-residence-district" id="applicant-residence-district">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="applicant-residence-province">Provinsi</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <select name="applicant-residence-province" id="applicant-residence-province" data-dependents="[&quot;applicant-residence-city&quot;]">
+                    <option value="">-- Silahkan Pilih --</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="applicant-residence-city">Kota</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <select name="applicant-residence-city" id="applicant-residence-city" data-select-option-mapping="city">
+                    <option value="">-- Silahkan Pilih --</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="applicant-residence-postal-code">Kode Pos</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="applicant-residence-postal-code" id="applicant-residence-postal-code">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <h3 class="section-sub-heading">Data Tempat Tinggal</h3>
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
@@ -228,68 +272,115 @@
           <input type="text" name="applicant-current-address" id="applicant-current-address">
         </div>
       </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="applicant-current-residence-neighbourhood">RT</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="applicant-current-residence-neighbourhood" id="applicant-current-residence-neighbourhood">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="applicant-current-residence-commune">RW</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="applicant-current-residence-commune" id="applicant-current-residence-commune">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="applicant-current-residence-village">Kelurahan</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="applicant-current-residence-village" id="applicant-current-residence-village">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="applicant-current-residence-district">Kecamatan</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="applicant-current-residence-district" id="applicant-current-residence-district">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="applicant-current-residence-province">Provinsi</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="applicant-current-residence-province" id="applicant-current-residence-province" data-dependents="[&quot;applicant-current-residence-city&quot;]">
-            <option value="">-- Silahkan Pilih --</option>
 
-          </select>
-        </div>
-      </div>
       <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="applicant-current-residence-city">Kabupaten/Kota</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="applicant-current-residence-city" id="applicant-current-residence-city" data-select-option-mapping="city">
-            <option value="">-- Silahkan Pilih --</option>
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="applicant-current-residence-neighbourhood">RT</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="applicant-current-residence-neighbourhood" id="applicant-current-residence-neighbourhood">
+                </div>
+              </div>
+            </div>
 
-          </select>
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="applicant-current-residence-commune">RW</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="applicant-current-residence-commune" id="applicant-current-residence-commune">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="applicant-current-residence-postal-code">Kode Pos</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="applicant-current-residence-postal-code" id="applicant-current-residence-postal-code">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="applicant-current-residence-village">Kelurahan</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="text" name="applicant-current-residence-village" id="applicant-current-residence-village">
+                </div>
+              </div>
+            </div>
+
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="applicant-current-residence-district">Kecamatan</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="text" name="applicant-current-residence-district" id="applicant-current-residence-district">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="applicant-current-residence-province">Provinsi</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <select name="applicant-current-residence-province" id="applicant-current-residence-province" data-dependents="[&quot;applicant-current-residence-city&quot;]">
+                    <option value="">-- Silahkan Pilih --</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="applicant-current-residence-city">Kota</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <select name="applicant-current-residence-city" id="applicant-current-residence-city" data-select-option-mapping="city">
+                    <option value="">-- Silahkan Pilih --</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="applicant-current-residence-postal-code">Kode Pos</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="applicant-current-residence-postal-code" id="applicant-current-residence-postal-code">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
           <label for="applicant-residence-ownership-status">Status Kepemilikan Rumah</label>
@@ -307,6 +398,7 @@
           </select>
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
           <label for="applicant-home-phone-number">No. Telepon/Handphone</label>
@@ -315,6 +407,7 @@
           <input type="text" name="applicant-home-phone-number" id="applicant-home-phone-number">
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
           <label for="applicant-residence-time-duration-year">Lama Tinggal (Tahun)</label>
@@ -323,14 +416,16 @@
           <input type="number" name="applicant-residence-time-duration-year" id="applicant-residence-time-duration-year">
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
           <label for="applicant-residence-time-duration-month">Lama Tinggal (Bulan)</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="applicant-residence-time-duration-month" id="applicant-residence-time-duration-month">
+          <input type="number" name="applicant-residence-time-duration-month" id="applicant-residence-time-duration-month">
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
           <label for="applicant-personal-email">Email</label>
@@ -398,6 +493,7 @@
           <input type="text" name="current-company-phone-number-extension" id="current-company-phone-number-extension">
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
           <label for="current-company-address-province">Provinsi</label>
@@ -409,9 +505,10 @@
           </select>
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="current-company-address-city">Kabupaten/Kota</label>
+          <label for="current-company-address-city">Kota</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
           <select name="current-company-address-city" id="current-company-address-city" data-select-option-mapping="city">
@@ -420,6 +517,7 @@
           </select>
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
           <label for="current-company-address-postal-code">Kode Pos</label>
@@ -428,6 +526,7 @@
           <input type="text" name="current-company-address-postal-code" id="current-company-address-postal-code">
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
           <label for="current-company-industry">Bidang Usaha</label>
@@ -454,6 +553,7 @@
           <input type="text" class="custom-input-text">
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
           <label for="current-company-position">Jabatan di Perusahaan</label>
@@ -472,6 +572,7 @@
           </select>
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
           <label for="current-company-working-time-duration">Lama Usaha/Lama Bekerja</label>
@@ -480,6 +581,7 @@
           <input type="text" name="current-company-working-time-duration" id="current-company-working-time-duration">
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
           <label for="current-company-income-per-month">Penghasilan/Gaji per Bulan</label>
@@ -569,7 +671,7 @@
       </div>
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="legal-entity-current-company-address-city">Kabupaten/Kota</label>
+          <label for="legal-entity-current-company-address-city">Kota</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
           <select name="legal-entity-current-company-address-city" id="legal-entity-current-company-address-city" data-select-option-mapping="city">
@@ -718,68 +820,113 @@
           <input type="text" name="partner-address" id="partner-address">
         </div>
       </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="partner-residence-neighbourhood">RT</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="partner-residence-neighbourhood" id="partner-residence-neighbourhood">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="partner-residence-commune">RW</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="partner-residence-commune" id="partner-residence-commune">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="partner-residence-village">Kelurahan</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="partner-residence-village" id="partner-residence-village">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="partner-residence-district">Kecamatan</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="partner-residence-district" id="partner-residence-district">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="partner-residence-province">Provinsi</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="partner-residence-province" id="partner-residence-province" data-dependents="[&quot;partner-residence-city&quot;]">
-            <option value="">-- Silahkan Pilih --</option>
 
-          </select>
-        </div>
-      </div>
       <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="partner-residence-city">Kabupaten/Kota</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="partner-residence-city" id="partner-residence-city" data-select-option-mapping="city">
-            <option value="">-- Silahkan Pilih --</option>
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="partner-residence-neighbourhood">RT</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="partner-residence-neighbourhood" id="partner-residence-neighbourhood">
+                </div>
+              </div>
+            </div>
 
-          </select>
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="partner-residence-commune">RW</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="partner-residence-commune" id="partner-residence-commune">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="partner-residence-postal-code">Kode Pos</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="partner-residence-postal-code" id="partner-residence-postal-code">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="partner-residence-village">Kelurahan</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="text" name="partner-residence-village" id="partner-residence-village">
+                </div>
+              </div>
+            </div>
+
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="partner-residence-district">Kecamatan</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="text" name="partner-residence-district" id="partner-residence-district">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="partner-residence-province">Provinsi</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <select name="partner-residence-province" id="partner-residence-province" data-dependents="[&quot;partner-residence-city&quot;]">
+                    <option value="">-- Silahkan Pilih --</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="partner-residence-city">Kota</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <select name="partner-residence-city" id="partner-residence-city" data-select-option-mapping="city">
+                    <option value="">-- Silahkan Pilih --</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="partner-residence-postal-code">Kode Pos</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="partner-residence-postal-code" id="partner-residence-postal-code">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <h3 class="section-sub-heading">Data Tempat Tinggal Pasangan</h3>
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
@@ -790,67 +937,111 @@
         </div>
       </div>
       <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="partner-current-residence-neighbourhood">RT</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="partner-current-residence-neighbourhood" id="partner-current-residence-neighbourhood">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="partner-current-residence-commune">RW</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="partner-current-residence-commune" id="partner-current-residence-commune">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="partner-current-residence-village">Kelurahan</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="partner-current-residence-village" id="partner-current-residence-village">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="partner-current-residence-district">Kecamatan</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="partner-current-residence-district" id="partner-current-residence-district">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="partner-current-residence-province">Provinsi</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="partner-current-residence-province" id="partner-current-residence-province" data-dependents="[&quot;partner-current-residence-city&quot;]">
-            <option value="">-- Silahkan Pilih --</option>
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="partner-current-residence-neighbourhood">RT</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="partner-current-residence-neighbourhood" id="partner-current-residence-neighbourhood">
+                </div>
+              </div>
+            </div>
 
-          </select>
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="partner-current-residence-commune">RW</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="partner-current-residence-commune" id="partner-current-residence-commune">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="partner-current-residence-city">Kabupaten/Kota</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="partner-current-residence-city" id="partner-current-residence-city" data-select-option-mapping="city">
-            <option value="">-- Silahkan Pilih --</option>
 
-          </select>
-        </div>
-      </div>
       <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="partner-current-residence-postal-code">Kode Pos</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="partner-current-residence-postal-code" id="partner-current-residence-postal-code">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="partner-current-residence-village">Kelurahan</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="text" name="partner-current-residence-village" id="partner-current-residence-village">
+                </div>
+              </div>
+            </div>
+
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="partner-current-residence-district">Kecamatan</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="text" name="partner-current-residence-district" id="partner-current-residence-district">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="partner-current-residence-province">Provinsi</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <select name="partner-current-residence-province" id="partner-current-residence-province" data-dependents="[&quot;partner-current-residence-city&quot;]">
+                    <option value="">-- Silahkan Pilih --</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="partner-current-residence-city">Kota</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <select name="partner-current-residence-city" id="partner-current-residence-city" data-select-option-mapping="city">
+                    <option value="">-- Silahkan Pilih --</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="partner-current-residence-postal-code">Kode Pos</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="partner-current-residence-postal-code" id="partner-current-residence-postal-code">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
           <label for="partner-home-phone-number">No. Telepon/Handphone</label>
@@ -905,7 +1096,7 @@
       </div>
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="partner-current-company-address-city">Kabupaten/Kota</label>
+          <label for="partner-current-company-address-city">Kota</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
           <select name="partner-current-company-address-city" id="partner-current-company-address-city" data-select-option-mapping="city">
@@ -1049,68 +1240,112 @@
           <input type="text" name="guarantor-address" id="guarantor-address">
         </div>
       </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="guarantor-residence-neighbourhood">RT</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="guarantor-residence-neighbourhood" id="guarantor-residence-neighbourhood">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="guarantor-residence-commune">RW</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="guarantor-residence-commune" id="guarantor-residence-commune">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="guarantor-residence-village">Kelurahan</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="guarantor-residence-village" id="guarantor-residence-village">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="guarantor-residence-district">Kecamatan</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="guarantor-residence-district" id="guarantor-residence-district">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="guarantor-residence-province">Provinsi</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="guarantor-residence-province" id="guarantor-residence-province" data-dependents="[&quot;guarantor-residence-city&quot;]">
-            <option value="">-- Silahkan Pilih --</option>
 
-          </select>
-        </div>
-      </div>
       <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="guarantor-residence-city">Kabupaten/Kota</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="guarantor-residence-city" id="guarantor-residence-city" data-select-option-mapping="city">
-            <option value="">-- Silahkan Pilih --</option>
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="guarantor-residence-neighbourhood">RT</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="guarantor-residence-neighbourhood" id="guarantor-residence-neighbourhood">
+                </div>
+              </div>
+            </div>
 
-          </select>
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="guarantor-residence-commune">RW</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="guarantor-residence-commune" id="guarantor-residence-commune">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="guarantor-residence-postal-code">Kode Pos</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="guarantor-residence-postal-code" id="guarantor-residence-postal-code">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="guarantor-residence-village">Kelurahan</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="text" name="guarantor-residence-village" id="guarantor-residence-village">
+                </div>
+              </div>
+            </div>
+
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="guarantor-residence-district">Kecamatan</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="text" name="guarantor-residence-district" id="guarantor-residence-district">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="guarantor-residence-province">Provinsi</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <select name="guarantor-residence-province" id="guarantor-residence-province" data-dependents="[&quot;guarantor-residence-city&quot;]">
+                    <option value="">-- Silahkan Pilih --</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="guarantor-residence-city">Kota</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <select name="guarantor-residence-city" id="guarantor-residence-city" data-select-option-mapping="city">
+                    <option value="">-- Silahkan Pilih --</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="guarantor-residence-postal-code">Kode Pos</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="guarantor-residence-postal-code" id="guarantor-residence-postal-code">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <h3 class="section-sub-heading">Data Tempat Tinggal Penjamin</h3>
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
@@ -1120,68 +1355,112 @@
           <input type="text" name="guarantor-current-address" id="guarantor-current-address">
         </div>
       </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="guarantor-current-residence-neighbourhood">RT</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="guarantor-current-residence-neighbourhood" id="guarantor-current-residence-neighbourhood">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="guarantor-current-residence-commune">RW</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="guarantor-current-residence-commune" id="guarantor-current-residence-commune">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="guarantor-current-residence-village">Kelurahan</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="guarantor-current-residence-village" id="guarantor-current-residence-village">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="guarantor-current-residence-district">Kecamatan</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="guarantor-current-residence-district" id="guarantor-current-residence-district">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="guarantor-current-residence-province">Provinsi</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="guarantor-current-residence-province" id="guarantor-current-residence-province" data-dependents="[&quot;guarantor-current-residence-city&quot;]">
-            <option value="">-- Silahkan Pilih --</option>
 
-          </select>
-        </div>
-      </div>
       <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="guarantor-current-residence-city">Kabupaten/Kota</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="guarantor-current-residence-city" id="guarantor-current-residence-city" data-select-option-mapping="city">
-            <option value="">-- Silahkan Pilih --</option>
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="guarantor-current-residence-neighbourhood">RT</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="guarantor-current-residence-neighbourhood" id="guarantor-current-residence-neighbourhood">
+                </div>
+              </div>
+            </div>
 
-          </select>
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="guarantor-current-residence-commune">RW</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="guarantor-current-residence-commune" id="guarantor-current-residence-commune">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="guarantor-current-residence-postal-code">Kode Pos</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="guarantor-current-residence-postal-code" id="guarantor-current-residence-postal-code">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="guarantor-current-residence-village">Kelurahan</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="text" name="guarantor-current-residence-village" id="guarantor-current-residence-village">
+                </div>
+              </div>
+            </div>
+
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="guarantor-current-residence-district">Kecamatan</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="text" name="guarantor-current-residence-district" id="guarantor-current-residence-district">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="guarantor-current-residence-province">Provinsi</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <select name="guarantor-current-residence-province" id="guarantor-current-residence-province" data-dependents="[&quot;guarantor-current-residence-city&quot;]">
+                    <option value="">-- Silahkan Pilih --</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="guarantor-current-residence-city">Kota</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <select name="guarantor-current-residence-city" id="guarantor-current-residence-city" data-select-option-mapping="city">
+                    <option value="">-- Silahkan Pilih --</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="guarantor-current-residence-postal-code">Kode Pos</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="guarantor-current-residence-postal-code" id="guarantor-current-residence-postal-code">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
           <label for="guarantor-home-phone-number">No. Telepon/Handphone</label>
@@ -1236,7 +1515,7 @@
       </div>
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="guarantor-current-company-address-city">Kabupaten/Kota</label>
+          <label for="guarantor-current-company-address-city">Kota</label>
         </div>
         <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
           <select name="guarantor-current-company-address-city" id="guarantor-current-company-address-city" data-select-option-mapping="city">
@@ -1351,68 +1630,112 @@
           <input type="text" name="reference-address" id="reference-address">
         </div>
       </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="reference-residence-neighbourhood">RT</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="reference-residence-neighbourhood" id="reference-residence-neighbourhood">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="reference-residence-commune">RW</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="reference-residence-commune" id="reference-residence-commune">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="reference-residence-village">Kelurahan</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="reference-residence-village" id="reference-residence-village">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="reference-residence-district">Kecamatan</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="text" name="reference-residence-district" id="reference-residence-district">
-        </div>
-      </div>
-      <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="reference-residence-province">Provinsi</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="reference-residence-province" id="reference-residence-province" data-dependents="[&quot;reference-residence-city&quot;]">
-            <option value="">-- Silahkan Pilih --</option>
 
-          </select>
-        </div>
-      </div>
       <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="reference-residence-city">Kabupaten/Kota</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <select name="reference-residence-city" id="reference-residence-city" data-select-option-mapping="city">
-            <option value="">-- Silahkan Pilih --</option>
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="reference-residence-neighbourhood">RT</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="reference-residence-neighbourhood" id="reference-residence-neighbourhood">
+                </div>
+              </div>
+            </div>
 
-          </select>
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="reference-residence-commune">RW</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="reference-residence-commune" id="reference-residence-commune">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="cermati-row margin-bottom-10">
-        <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
-          <label for="reference-residence-postal-code">Kode Pos</label>
-        </div>
-        <div class="cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
-          <input type="number" name="reference-residence-postal-code" id="reference-residence-postal-code">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="reference-residence-village">Kelurahan</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="text" name="reference-residence-village" id="reference-residence-village">
+                </div>
+              </div>
+            </div>
+
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="reference-residence-district">Kecamatan</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="text" name="reference-residence-district" id="reference-residence-district">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="reference-residence-province">Provinsi</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <select name="reference-residence-province" id="reference-residence-province" data-dependents="[&quot;reference-residence-city&quot;]">
+                    <option value="">-- Silahkan Pilih --</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="reference-residence-city">Kota</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <select name="reference-residence-city" id="reference-residence-city" data-select-option-mapping="city">
+                    <option value="">-- Silahkan Pilih --</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cermati-row margin-bottom-10">
+        <div class="cermati-col-md-offset-3 cermati-col-sm-offset-4 cermati-col-md-9 cermati-col-sm-8 cermati-col-xs-12">
+          <div class="cermati-row">
+            <div class="cermati-col-md-6 cermati-col-xs-12">
+              <div class="cermati-row">
+                <div class="cermati-col-md-4 cermati-col-xs-12">
+                  <label for="reference-residence-postal-code">Kode Pos</label>
+                </div>
+                <div class="cermati-col-md-8 cermati-col-xs-12">
+                  <input type="number" name="reference-residence-postal-code" id="reference-residence-postal-code">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="cermati-row margin-bottom-10">
         <div class="cermati-col-md-3 cermati-col-sm-4 cermati-col-xs-12 text-right xs-text-left">
           <label for="reference-phone-number">No. Telepon/Handphone</label>
