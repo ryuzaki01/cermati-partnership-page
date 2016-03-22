@@ -15,7 +15,7 @@ var defaultProductOptions = [
 ];
 
 var formData = _.defaults({
-  productId: '56dd564889df9d09ac91b40a', // TODO: hardcode this with CNAF product id in db production.
+  productId: '56f0f24992e8ff884b95f7cd', // TODO: hardcode this with CNAF product id in db production.
   product: 'Retail Financing Mobil Bekas CIMB Niaga Auto Finance',
   productType: 'Kredit Mobil Bekas',
   institution: 'CIMB Niaga Auto Finance',
