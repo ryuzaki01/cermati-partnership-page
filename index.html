@@ -53,17 +53,19 @@
                         </td>
                         <td>
                           <div class="form-group">
-                            <input type="number" id="price" name="price" step="1000000"/>
+                            <input type="text" id="price" class="mask-money" />
+                            <input type="hidden" name="price" />
                           </div>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <label for="price">Down Payment</label>
+                          <label>Down Payment</label>
                         </td>
                         <td>
                           <div class="form-group">
-                            <input type="number" name="downPayment" step="1000000"/>
+                            <input type="text" class="mask-money" />
+                            <input type="hidden" name="downPayment"/>
                           </div>
                         </td>
                       </tr>

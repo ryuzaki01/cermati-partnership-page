@@ -8,7 +8,7 @@ var handlers = require('./handlers');
 var calculatorForm = require('./olx/calculator');
 var applyForm = require('./olx/cimb-niaga-auto-finance/apply-form');
 var completeForm = require('./olx/cimb-niaga-auto-finance/complete-form');
-var apiLoader = require('./olx/apiLoader');
+var apiLoader = require('./olx/cimb-niaga-auto-finance/apiLoader');
 var provinces = require('./data/provinces');
 var cities = require('./data/cities');
 var cityMappings = require('./data/cityMappings');
@@ -34,6 +34,7 @@ module.exports = {
       apiLoader.init(function () {
         handlers.handleQueryString($('#calculator-form'));
       });
+      handlers.handleMoneyMask();
       handlers.handleTabs();
       handlers.handleAutoCompleteCity();
       calculatorForm.init();

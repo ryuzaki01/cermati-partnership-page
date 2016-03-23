@@ -1,13 +1,20 @@
 'use strict';
 
+var maskMoneyUtil = require('./utils/maskMoney');
+
 module.exports = {
+  handleMoneyMask: function () {
+    $.each($('.mask-money'), function () {
+      maskMoneyUtil.maskMoney($(this), $(this).siblings('input'));
+    })
+  },
   handleQueryString: function ($form) {
     var query = document.location.search.replace('?', '');
     query = query.split('&');
     if (query.length > 1) {
       query.forEach(function (q) {
         var keyVal = q.split('=');
-        $form.find('[name=' + keyVal[0] + ']').val(keyVal[1]);
+        $form.find('[name=' + keyVal[0] + ']').val(keyVal[1]).trigger('change');
       });
     }
     window.history.replaceState(null, document.title, './');
