@@ -4,15 +4,10 @@ var $ = require('jquery');
 
 var lastDot = 0;
 
-module.exports.maskMoney = function ($mask, $input) {
+module.exports.maskMoney = function ($mask) {
   var ctrlKeyDown = false;
-  $input.on('input paste change', function () {
-    $mask
-        .val($input.val())
-        .trigger('paste');
-  });
   $mask.on('focus', function () {
-    if (parseInt($input.val()) === 0) {
+    if (parseInt($mask.val()) === 0) {
       $mask.select();
     }
   });
@@ -44,8 +39,14 @@ module.exports.maskMoney = function ($mask, $input) {
           (selectStart + lastDotPosition),
           (selectEnd + lastDotPosition)
       );
-      $input.val($mask.val().replace(/\./g, ""));
       lastDot = dotCount;
     }
   });
+
+  // Trigger onece
+  $mask.trigger('paste');
 };
+
+module.exports.unMask = function ($input) {
+  $input.val($input.val().replace(/\D/g, ''));
+}

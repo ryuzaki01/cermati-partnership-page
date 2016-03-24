@@ -34,6 +34,7 @@ module.exports = {
       apiLoader.init(function () {
         handlers.handleQueryString($('#calculator-form'));
       });
+      handlers.handleDatePicker();
       handlers.handleMoneyMask();
       handlers.handleTabs();
       handlers.handleAutoCompleteCity();

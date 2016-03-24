@@ -66,7 +66,6 @@ module.exports = {
     $form.on('submit', function (event) {
       event.preventDefault();
 
-
       // Reset Error Input
       $form.find('.validation-error').remove();
       $form.find('.has-error').removeClass('has-error');

@@ -5,7 +5,6 @@ var _ = require('lodash/fp');
 var sprintf = require('sprintf-js').sprintf;
 var formUtil = require('../../utils/form');
 var scrollUtil = require('../../utils/scroll');
-var DATE = require('../../utils/constants').JQUERY_DATE_PICKER;
 
 var defaultOption = $.bind($, '<option value="">-- Silahkan Pilih --</option>');
 
@@ -99,90 +98,6 @@ var prepareSelectFieldWithCustomInput = function () {
   });
 };
 
-var prepareDateInputFields = function () {
-  $('.date-picker').each(function () {
-    var $dateInput = $(this);
-    var accuracy = $dateInput.data('accuracy') || DATE.accuracy.date;
-    var format = DATE.format.id[accuracy] || DATE.format.id.date;
-    var yearRange = $dateInput.data('yearRange') || DATE.range.year;
-    var datePickerConfigs = {
-      dateFormat: format,
-      changeMonth: true,
-      changeYear: true,
-      showButtonPanel: true,
-      yearRange: yearRange,
-      closeText: 'Tutup'
-    };
-
-    $dateInput.datepicker(datePickerConfigs);
-
-    // Hides datepicker date calendar if the accuracy is month or year.
-    // NOTE: datepicker uses the same element (singleton) for multiple calendars.
-    if (accuracy === DATE.accuracy.month || accuracy === DATE.accuracy.year) {
-      // Assign datepicker element after we trigger $dateInput.datepicker(datePickerConfigs)
-      var $datePickerDiv = $('#ui-datepicker-div');
-
-      // Datepicker always resets the value everytime we do $dateInput.datepicker('option', ..., ...)
-      // so we need to preserve the originalValue
-      var originalValue = $dateInput.val();
-
-      $dateInput.datepicker('option', 'onChangeMonthYear', function (year, month) {
-        // Javascript Date's month uses zero based index
-        $dateInput.val($.datepicker.formatDate(format, new Date(year, month - 1, 1)));
-
-        // Trigger change manually, because setting the $dateInput.val() programmatically
-        // does not trigger change event.
-        $dateInput.trigger('change');
-      });
-
-      // Always reset the margin everytime datepicker is closed
-      $dateInput.datepicker('option', 'onClose', function () {
-        // Because datepicker has transition, we need to wait until the transition has ended
-        setTimeout(function () {
-          $datePickerDiv.css('margin-top', '0');
-        }, 300);
-      });
-
-      // Set back the originalValue to $dateInput
-      $dateInput.val(originalValue);
-
-      $dateInput.on('focus', function () {
-        var $closeDatePickerButton = $datePickerDiv.find('button.ui-datepicker-close');
-        var $year = $datePickerDiv.find('.ui-datepicker-year');
-        var $month = $datePickerDiv.find('.ui-datepicker-month');
-
-        // Hide the date calendar everytime user clicks on the input
-        $datePickerDiv.find('.ui-datepicker-calendar').hide();
-
-        if (accuracy === DATE.accuracy.year) {
-          $datePickerDiv.find('.ui-datepicker-month').hide();
-        }
-
-        // Only show datepicker `Done` button when accuracy is not `date`
-        $closeDatePickerButton.show();
-
-        // If user clicks the close button without picking the date then the
-        // selected date won't get set, because the only trigger that set the date is
-        // the handler that we set on event `onChangeMonthYear`, the other one is
-        // the jquery datepicker's date cells, but on accuracy month or year we hide
-        // the date cells.
-        $closeDatePickerButton.one('click', function () {
-          var date = new Date($year.val(), $month.val());
-          $dateInput.val($.datepicker.formatDate(format, date));
-        });
-
-        // If we only show month and year, datepicker still calculates the date calendar's
-        // margin-top that we hide, so we need to set the margin-top programmatically.
-        if ($datePickerDiv.offset().top < $(this).offset().top) {
-          $datePickerDiv.css('margin-top', '180px');
-        } else {
-          $datePickerDiv.css('margin-top', '0');
-        }
-      });
-    }
-  });
-};
-
 var prepareSubmissionHandler = function () {
   var $formLoading = $('#completeform-loading');
   var $submitBtn = $('#completeform-submit');
@@ -257,7 +172,6 @@ var prepareSubmissionHandler = function () {
 
 exports.ready = function () {
   prepareSelectOptions();
-  prepareDateInputFields();
-  prepareSelectFieldWithCustomInput()
+  prepareSelectFieldWithCustomInput();
   prepareSubmissionHandler();
 };
