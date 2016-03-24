@@ -832,6 +832,10 @@ select {
   background-size: contain;
   padding-right: 30px;
 }
+.cermati-logo {
+  max-width: 100%;
+  margin-top: 20px;
+}
 .form-group {
   padding-bottom: 12px;
 }
@@ -894,6 +898,9 @@ select {
 }
 .calculator-form form label {
   vertical-align: 12px;
+}
+.calculator-form form td:first-child {
+  vertical-align: top;
 }
 .form-container {
   border: 1px solid #ddd;
