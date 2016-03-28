@@ -42,8 +42,8 @@ module.exports = {
 
       // Load Complete Form
       $completeForm.load(
-          'pages/olx/cimb-niaga-auto-finance/complete-form-v2.html',
-          completeForm.ready
+        'pages/olx/cimb-niaga-auto-finance/complete-form-v2.html',
+        completeForm.ready
       );
     });
   },
@@ -55,8 +55,8 @@ module.exports = {
   renderSimulationTable: function (data) {
     var items = [
       [
-      'Total DP Bayar',
-      'Angsuran'
+        'Total DP Bayar',
+        'Angsuran'
       ]
     ];
     data.forEach(function (d) {
