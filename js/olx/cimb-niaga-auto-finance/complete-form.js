@@ -30,7 +30,7 @@ var option = function (label, value) {
  * @param messages - An array or string of validation messages.
  * @returns {JQuery<Element>}
  */
-var $form = function (messages) {
+var validationError = function (messages) {
   if (!_.isArray(messages)) {
     messages = [messages];
   }
@@ -203,7 +203,7 @@ var prepareSubmissionHandler = function () {
           var messages = _.values(messageObj);
           var $inputContainer = $('#' + inputId).parent();
           $inputContainer
-            .addClass('has-validationError')
+            .addClass('has-error')
             .append(validationError(messages));
         })
         .value();
