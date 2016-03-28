@@ -42,7 +42,7 @@ module.exports = {
 
       // Load Complete Form
       $completeForm.load(
-          'pages/olx/cimb-niaga-auto-finance/complete-form.html',
+          'pages/olx/cimb-niaga-auto-finance/complete-form-v2.html',
           completeForm.ready
       );
     });
