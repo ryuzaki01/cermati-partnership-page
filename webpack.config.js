@@ -29,15 +29,7 @@ var optimizerPlugins = [
 ];
 
 module.exports = {
-  entry: {
-    vendors: [
-      'jquery',
-      'ui',
-      'lodash',
-      'responsiveTabs'
-    ],
-    app: 'main'
-  },
+  entry: 'main',
   output: {
     path: __dirname + '/dist/js/',
     filename: 'main.js'
@@ -55,8 +47,9 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(process.env.WEBPACK_NODE_ENV),
-        BASE_URL: JSON.stringify(process.env.BASE_URL)
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        BASE_URL: JSON.stringify(process.env.BASE_URL),
+        API_URL: JSON.stringify(process.env.API_URL)
       }
     }),
 
@@ -64,8 +57,7 @@ module.exports = {
       'window.jQuery': 'jquery',
       jQuery: 'jquery',
       $: 'jquery'
-    }),
-    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
+    })
   ].concat(process.env.NODE_ENV === 'development' ? [] : optimizerPlugins),
   devtool: process.env.NODE_ENV === 'staging' ? 'source-map' : false
 };

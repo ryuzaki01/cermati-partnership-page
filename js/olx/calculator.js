@@ -81,7 +81,7 @@ module.exports = {
       $form.find('.has-error').removeClass('has-error');
 
       $.ajax({
-        url: App.url('/api/widget/olx'),
+        url: App.apiUrl('/api/widget/olx'),
         method: 'GET',
         data: $form.serialize(),
         beforeSend: _.noop,

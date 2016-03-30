@@ -25,8 +25,8 @@ var paths = {
       './css/*.less'
     ]
   },
-  less: ['./css/*.less'],
-  vendorCss: [
+  less: [
+    './css/*.less',
     './js/jquery-ui/jquery-ui.css',
     './js/jquery-ui/jquery.responsiveTabs.css'
   ],
@@ -35,7 +35,6 @@ var paths = {
   cssOutput: './dist/css/',
   cssOutputFilePattern: '*.css',
   cssOutputFileName: 'all.min.css',
-  vendorCssOutputFileName: 'vendor.min.css',
   images: ['./images/*'],
 
   // TODO: the dist/image is not used for now and it is ignore in the .gitignore. We need to update a bunch of css.
@@ -66,7 +65,7 @@ gulp.task('cleanImages', function (cb) {
   ], cb);
 });
 
-gulp.task('less', ['cleanCss'], function () {
+gulp.task('css', ['cleanCss'], function () {
   var prefixerPipe = autoprefixer({
     browsers: '> 1%',
     cascade: false
@@ -76,14 +75,6 @@ gulp.task('less', ['cleanCss'], function () {
     .pipe(less({compress: true}).on('error', util.log))
     .pipe(concat(paths.cssOutputFileName))
     .pipe(prefixerPipe)
-    .pipe(minifyCSS())
-    .pipe(gulp.dest(paths.cssOutput))
-    .pipe(livereload());
-});
-
-gulp.task('css', ['less'], function () {
-  return gulp.src(paths.vendorCss)
-    .pipe(concat(paths.vendorCssOutputFileName))
     .pipe(minifyCSS())
     .pipe(gulp.dest(paths.cssOutput))
     .pipe(livereload());
@@ -122,13 +113,7 @@ gulp.task('watch-less', function () {
 });
 
 // In the CI we want to run the client script and build css
-gulp.task('build', ['clientScript', 'css', 'images'], function () {
-  if (process.env.SHIPPABLE) {
-    // This is needed because keystone.mongoose.disconnect sometimes didn't kill the process
-    // so in CI environment, the process can be running forever
-    process.exit(0);
-  }
-});
+gulp.task('build', ['clientScript', 'css', 'images']);
 
 // Default task for local environment
 gulp.task('default', ['build', 'images']);

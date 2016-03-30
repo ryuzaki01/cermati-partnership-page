@@ -18,14 +18,14 @@ module.exports = {
     $areaSelect.html('<option value=""> - Pilih Wilayah -</option>');
 
     $.when(
-      $.ajax(App.url('/api/widget/olx/area'), {
+      $.ajax(App.apiUrl('/api/widget/olx/area'), {
         method: 'GET',
         data: {
           loan: loanSlug
         },
         dataType: 'json'
       }),
-      $.ajax(App.url('/api/widget/olx/brand'), {
+      $.ajax(App.apiUrl('/api/widget/olx/brand'), {
         method: 'GET',
         data: {
           loan: loanSlug

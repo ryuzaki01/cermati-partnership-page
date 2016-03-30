@@ -1,7 +1,10 @@
 'use strict';
 
+var $ = require('jquery');
 var maskMoneyUtil = require('./utils/maskMoney');
 var DATE = require('./utils/constants').JQUERY_DATE_PICKER;
+require('ui');
+require('responsiveTabs');
 
 module.exports = {
   handleMoneyMask: function () {
@@ -10,11 +13,9 @@ module.exports = {
       var $parentForm = $(this).closest("form");
       maskMoneyUtil.maskMoney($self);
       $parentForm.on('submit', function () {
-        console.log('submit asdsadsadsadasdda');
         maskMoneyUtil.unMask($self);
       });
       $(document).ajaxComplete(function() {
-        console.log('complete asdsadsadsadasdda');
         maskMoneyUtil.maskMoney($self);
       });
     })
@@ -25,8 +26,10 @@ module.exports = {
     if (query.length > 1) {
       query.forEach(function (q) {
         var keyVal = q.split('=');
-        $form.find('[name=' + keyVal[0] + ']').val(keyVal[1]).trigger('change');
+        console.log(keyVal[1]);
+        $form.find('[name=' + keyVal[0] + ']').val(decodeURIComponent(keyVal[1])).trigger('change');
       });
+      $form.trigger('submit');
     }
     window.history.replaceState(null, document.title, './');
   },

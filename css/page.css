@@ -948,7 +948,7 @@ select {
   margin-left: 20px;
 }
 .ads {
-  max-width: 100%;
+  width: 100%;
 }
 .table-container {
   width: 100%;

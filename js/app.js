@@ -27,6 +27,9 @@ module.exports = {
   url: function (url) {
     return process.env.BASE_URL + url;
   },
+  apiUrl: function (url) {
+    return process.env.API_URL + url;
+  },
   init: function () {
     // Initialize App
     $(document).ready(function () {
